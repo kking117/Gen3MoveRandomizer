@@ -1,0 +1,12 @@
+Volt
+Zap
+Stun
+Light
+Electro
+Thunder
+Shock
+Spark
+Magnet
+Plasma
+Electric
+Flash

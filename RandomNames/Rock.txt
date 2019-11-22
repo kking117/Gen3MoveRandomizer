@@ -1,0 +1,11 @@
+Rock
+Ancient
+Bone
+Skull
+Brick
+Stone
+Diamond
+Marble
+Granite
+Gravel
+Crystal

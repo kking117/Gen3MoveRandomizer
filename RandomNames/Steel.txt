@@ -1,0 +1,15 @@
+Metal
+Iron
+Steel
+Magnet
+Silver
+Bullet
+Lead
+Mirror
+Gear
+Bronze
+Copper
+Rust
+Nickel
+Chrome
+Rusty
