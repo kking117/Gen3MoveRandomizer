@@ -16,3 +16,25 @@ C:\Users\kking117\Documents\OLDVB\Gen3MoveRandomizer\Gen3MoveRandomizer\bin\Debu
 C:\Users\kking117\Documents\OLDVB\Gen3MoveRandomizer\Gen3MoveRandomizer\obj\x86\Debug\Gen3MoveRandomizer.Form1.resources
 C:\Users\kking117\Documents\OLDVB\Gen3MoveRandomizer\Gen3MoveRandomizer\obj\x86\Debug\Gen3MoveRandomizer.Resources.resources
 C:\Users\kking117\Documents\OLDVB\Gen3MoveRandomizer\Gen3MoveRandomizer\obj\x86\Debug\Gen3MoveRandomizer.vbproj.GenerateResource.Cache
+C:\Users\Gaming Computer\source\Gen3MoveRandomizer\Gen3MoveRandomizer\bin\Debug\Gen3MoveRandomizer.exe
+C:\Users\Gaming Computer\source\Gen3MoveRandomizer\Gen3MoveRandomizer\bin\Debug\Gen3MoveRandomizer.pdb
+C:\Users\Gaming Computer\source\Gen3MoveRandomizer\Gen3MoveRandomizer\bin\Debug\Gen3MoveRandomizer.xml
+C:\Users\Gaming Computer\source\Gen3MoveRandomizer\Gen3MoveRandomizer\obj\x86\Debug\Gen3MoveRandomizer.vbprojAssemblyReference.cache
+C:\Users\Gaming Computer\source\Gen3MoveRandomizer\Gen3MoveRandomizer\obj\x86\Debug\Gen3MoveRandomizer.Form1.resources
+C:\Users\Gaming Computer\source\Gen3MoveRandomizer\Gen3MoveRandomizer\obj\x86\Debug\Gen3MoveRandomizer.Resources.resources
+C:\Users\Gaming Computer\source\Gen3MoveRandomizer\Gen3MoveRandomizer\obj\x86\Debug\Gen3MoveRandomizer.vbproj.GenerateResource.cache
+C:\Users\Gaming Computer\source\Gen3MoveRandomizer\Gen3MoveRandomizer\obj\x86\Debug\Gen3MoveRandomizer.vbproj.CoreCompileInputs.cache
+C:\Users\Gaming Computer\source\Gen3MoveRandomizer\Gen3MoveRandomizer\obj\x86\Debug\Gen3MoveRandomizer.exe
+C:\Users\Gaming Computer\source\Gen3MoveRandomizer\Gen3MoveRandomizer\obj\x86\Debug\Gen3MoveRandomizer.xml
+C:\Users\Gaming Computer\source\Gen3MoveRandomizer\Gen3MoveRandomizer\obj\x86\Debug\Gen3MoveRandomizer.pdb
+C:\Users\Gaming Computer\source\repos\Gen3MoveRandomizer\Gen3MoveRandomizer\bin\Debug\Gen3MoveRandomizer.exe
+C:\Users\Gaming Computer\source\repos\Gen3MoveRandomizer\Gen3MoveRandomizer\bin\Debug\Gen3MoveRandomizer.pdb
+C:\Users\Gaming Computer\source\repos\Gen3MoveRandomizer\Gen3MoveRandomizer\bin\Debug\Gen3MoveRandomizer.xml
+C:\Users\Gaming Computer\source\repos\Gen3MoveRandomizer\Gen3MoveRandomizer\obj\x86\Debug\Gen3MoveRandomizer.Form1.resources
+C:\Users\Gaming Computer\source\repos\Gen3MoveRandomizer\Gen3MoveRandomizer\obj\x86\Debug\Gen3MoveRandomizer.Resources.resources
+C:\Users\Gaming Computer\source\repos\Gen3MoveRandomizer\Gen3MoveRandomizer\obj\x86\Debug\Gen3MoveRandomizer.vbproj.GenerateResource.cache
+C:\Users\Gaming Computer\source\repos\Gen3MoveRandomizer\Gen3MoveRandomizer\obj\x86\Debug\Gen3MoveRandomizer.vbproj.CoreCompileInputs.cache
+C:\Users\Gaming Computer\source\repos\Gen3MoveRandomizer\Gen3MoveRandomizer\obj\x86\Debug\Gen3MoveRandomizer.exe
+C:\Users\Gaming Computer\source\repos\Gen3MoveRandomizer\Gen3MoveRandomizer\obj\x86\Debug\Gen3MoveRandomizer.xml
+C:\Users\Gaming Computer\source\repos\Gen3MoveRandomizer\Gen3MoveRandomizer\obj\x86\Debug\Gen3MoveRandomizer.pdb
+C:\Users\Gaming Computer\source\repos\Gen3MoveRandomizer\Gen3MoveRandomizer\obj\x86\Debug\Gen3MoveRandomizer.vbprojAssemblyReference.cache

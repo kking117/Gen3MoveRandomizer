@@ -28,16 +28,15 @@ Partial Class Form1
         Me.Label1 = New System.Windows.Forms.Label()
         Me.startrand = New System.Windows.Forms.Button()
         Me.rndacc = New System.Windows.Forms.GroupBox()
-        Me.balancestats = New System.Windows.Forms.CheckBox()
-        Me.rndpp = New System.Windows.Forms.CheckBox()
-        Me.rndaccurate = New System.Windows.Forms.CheckBox()
-        Me.rndpower = New System.Windows.Forms.CheckBox()
+        Me.checkbox_rnd_pp = New System.Windows.Forms.CheckBox()
+        Me.checkbox_rnd_effect = New System.Windows.Forms.CheckBox()
+        Me.checkbox_rnd_accuracy = New System.Windows.Forms.CheckBox()
+        Me.checkbox_rnd_power = New System.Windows.Forms.CheckBox()
+        Me.checkbox_balance = New System.Windows.Forms.CheckBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.rndcat = New System.Windows.Forms.CheckBox()
-        Me.rndeffect = New System.Windows.Forms.CheckBox()
-        Me.rndtarget = New System.Windows.Forms.CheckBox()
-        Me.rndtype = New System.Windows.Forms.CheckBox()
-        Me.rndname = New System.Windows.Forms.CheckBox()
+        Me.checkbox_rnd_category = New System.Windows.Forms.CheckBox()
+        Me.checkbox_rnd_element = New System.Windows.Forms.CheckBox()
+        Me.checkbox_rnd_name = New System.Windows.Forms.CheckBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.lstboxgame = New System.Windows.Forms.ComboBox()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
@@ -45,30 +44,39 @@ Partial Class Form1
         Me.OpenRomToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OpenFile = New System.Windows.Forms.OpenFileDialog()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
-        Me.context = New System.Windows.Forms.CheckBox()
-        Me.rounder = New System.Windows.Forms.CheckBox()
+        Me.checkbox_rnd_name_context = New System.Windows.Forms.CheckBox()
+        Me.checkbox_limit_effects = New System.Windows.Forms.CheckBox()
+        Me.checkbox_rnd_anim_context = New System.Windows.Forms.CheckBox()
+        Me.checkbox_rnd_anim = New System.Windows.Forms.CheckBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.GroupBox6 = New System.Windows.Forms.GroupBox()
+        Me.GroupBox5 = New System.Windows.Forms.GroupBox()
+        Me.checkbox_ignore_struggle = New System.Windows.Forms.CheckBox()
+        Me.checkbox_tweak_semi = New System.Windows.Forms.CheckBox()
+        Me.checkbox_buff_normal = New System.Windows.Forms.CheckBox()
         Me.rndacc.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
+        Me.GroupBox6.SuspendLayout()
+        Me.GroupBox5.SuspendLayout()
         Me.SuspendLayout()
         '
         'patchfile
         '
-        Me.patchfile.Location = New System.Drawing.Point(55, 27)
+        Me.patchfile.Location = New System.Drawing.Point(65, 27)
         Me.patchfile.Name = "patchfile"
         Me.patchfile.ReadOnly = True
-        Me.patchfile.Size = New System.Drawing.Size(312, 20)
+        Me.patchfile.Size = New System.Drawing.Size(385, 20)
         Me.patchfile.TabIndex = 0
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(8, 30)
+        Me.Label1.Location = New System.Drawing.Point(18, 30)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(41, 13)
         Me.Label1.TabIndex = 1
@@ -76,150 +84,134 @@ Partial Class Form1
         '
         'startrand
         '
-        Me.startrand.Location = New System.Drawing.Point(373, 27)
+        Me.startrand.Location = New System.Drawing.Point(21, 53)
         Me.startrand.Name = "startrand"
-        Me.startrand.Size = New System.Drawing.Size(75, 23)
+        Me.startrand.Size = New System.Drawing.Size(177, 48)
         Me.startrand.TabIndex = 2
         Me.startrand.Text = "Randomize"
         Me.startrand.UseVisualStyleBackColor = True
         '
         'rndacc
         '
-        Me.rndacc.Controls.Add(Me.balancestats)
-        Me.rndacc.Controls.Add(Me.rndpp)
-        Me.rndacc.Controls.Add(Me.rndaccurate)
-        Me.rndacc.Controls.Add(Me.rndpower)
-        Me.rndacc.Location = New System.Drawing.Point(21, 53)
+        Me.rndacc.Controls.Add(Me.checkbox_rnd_pp)
+        Me.rndacc.Controls.Add(Me.checkbox_rnd_effect)
+        Me.rndacc.Controls.Add(Me.checkbox_rnd_accuracy)
+        Me.rndacc.Controls.Add(Me.checkbox_rnd_power)
+        Me.rndacc.Location = New System.Drawing.Point(21, 107)
         Me.rndacc.Name = "rndacc"
-        Me.rndacc.Size = New System.Drawing.Size(141, 118)
+        Me.rndacc.Size = New System.Drawing.Size(140, 100)
         Me.rndacc.TabIndex = 4
         Me.rndacc.TabStop = False
-        Me.rndacc.Text = "Power, Accuracy and PP"
+        Me.rndacc.Text = "Primary Stats + Effect"
         '
-        'balancestats
+        'checkbox_rnd_pp
         '
-        Me.balancestats.AutoSize = True
-        Me.balancestats.Location = New System.Drawing.Point(6, 93)
-        Me.balancestats.Name = "balancestats"
-        Me.balancestats.Size = New System.Drawing.Size(121, 17)
-        Me.balancestats.TabIndex = 13
-        Me.balancestats.Text = "Balance Randomize"
-        Me.ToolTip1.SetToolTip(Me.balancestats, "This forces all three options on." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Attempts to balance out the" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Power, Accuracy, " & _
-                "PP and" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Effect Chance to create" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "reasonable/balanced attacks.")
-        Me.balancestats.UseVisualStyleBackColor = True
+        Me.checkbox_rnd_pp.AutoSize = True
+        Me.checkbox_rnd_pp.Location = New System.Drawing.Point(6, 60)
+        Me.checkbox_rnd_pp.Name = "checkbox_rnd_pp"
+        Me.checkbox_rnd_pp.Size = New System.Drawing.Size(96, 17)
+        Me.checkbox_rnd_pp.TabIndex = 12
+        Me.checkbox_rnd_pp.Text = "Randomize PP"
+        Me.ToolTip1.SetToolTip(Me.checkbox_rnd_pp, "Randomizes the PP of moves.")
+        Me.checkbox_rnd_pp.UseVisualStyleBackColor = True
         '
-        'rndpp
+        'checkbox_rnd_effect
         '
-        Me.rndpp.AutoSize = True
-        Me.rndpp.Location = New System.Drawing.Point(6, 71)
-        Me.rndpp.Name = "rndpp"
-        Me.rndpp.Size = New System.Drawing.Size(96, 17)
-        Me.rndpp.TabIndex = 12
-        Me.rndpp.Text = "Randomize PP"
-        Me.ToolTip1.SetToolTip(Me.rndpp, "Randomizes the total PP moves" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "have.")
-        Me.rndpp.UseVisualStyleBackColor = True
+        Me.checkbox_rnd_effect.AutoSize = True
+        Me.checkbox_rnd_effect.Location = New System.Drawing.Point(6, 80)
+        Me.checkbox_rnd_effect.Name = "checkbox_rnd_effect"
+        Me.checkbox_rnd_effect.Size = New System.Drawing.Size(110, 17)
+        Me.checkbox_rnd_effect.TabIndex = 3
+        Me.checkbox_rnd_effect.Text = "Randomize Effect"
+        Me.ToolTip1.SetToolTip(Me.checkbox_rnd_effect, "Randomizes the effects of moves." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Also changes the:" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Effect Chance" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Target" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Fla" &
+        "gs (makes contact, ignores protect, etc)" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Priority Bracket" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Description (matches" &
+        " the new effect)")
+        Me.checkbox_rnd_effect.UseVisualStyleBackColor = True
         '
-        'rndaccurate
+        'checkbox_rnd_accuracy
         '
-        Me.rndaccurate.AutoSize = True
-        Me.rndaccurate.Location = New System.Drawing.Point(6, 48)
-        Me.rndaccurate.Name = "rndaccurate"
-        Me.rndaccurate.Size = New System.Drawing.Size(127, 17)
-        Me.rndaccurate.TabIndex = 11
-        Me.rndaccurate.Text = "Randomize Accuracy"
-        Me.ToolTip1.SetToolTip(Me.rndaccurate, "Randomizes the accuracy of moves" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "that depend on accuracy.")
-        Me.rndaccurate.UseVisualStyleBackColor = True
+        Me.checkbox_rnd_accuracy.AutoSize = True
+        Me.checkbox_rnd_accuracy.Location = New System.Drawing.Point(6, 40)
+        Me.checkbox_rnd_accuracy.Name = "checkbox_rnd_accuracy"
+        Me.checkbox_rnd_accuracy.Size = New System.Drawing.Size(127, 17)
+        Me.checkbox_rnd_accuracy.TabIndex = 11
+        Me.checkbox_rnd_accuracy.Text = "Randomize Accuracy"
+        Me.ToolTip1.SetToolTip(Me.checkbox_rnd_accuracy, "Randomizes the accuracy of moves that use it.")
+        Me.checkbox_rnd_accuracy.UseVisualStyleBackColor = True
         '
-        'rndpower
+        'checkbox_rnd_power
         '
-        Me.rndpower.AutoSize = True
-        Me.rndpower.Location = New System.Drawing.Point(6, 25)
-        Me.rndpower.Name = "rndpower"
-        Me.rndpower.Size = New System.Drawing.Size(112, 17)
-        Me.rndpower.TabIndex = 10
-        Me.rndpower.Text = "Randomize Power"
-        Me.ToolTip1.SetToolTip(Me.rndpower, "Randomizes the power of moves that" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "deal damage.")
-        Me.rndpower.UseVisualStyleBackColor = True
+        Me.checkbox_rnd_power.AutoSize = True
+        Me.checkbox_rnd_power.Location = New System.Drawing.Point(6, 20)
+        Me.checkbox_rnd_power.Name = "checkbox_rnd_power"
+        Me.checkbox_rnd_power.Size = New System.Drawing.Size(112, 17)
+        Me.checkbox_rnd_power.TabIndex = 10
+        Me.checkbox_rnd_power.Text = "Randomize Power"
+        Me.ToolTip1.SetToolTip(Me.checkbox_rnd_power, "Randomizes the power of moves that" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "deal damage.")
+        Me.checkbox_rnd_power.UseVisualStyleBackColor = True
+        '
+        'checkbox_balance
+        '
+        Me.checkbox_balance.AutoSize = True
+        Me.checkbox_balance.Location = New System.Drawing.Point(6, 17)
+        Me.checkbox_balance.Name = "checkbox_balance"
+        Me.checkbox_balance.Size = New System.Drawing.Size(106, 17)
+        Me.checkbox_balance.TabIndex = 13
+        Me.checkbox_balance.Text = "Balanced Moves"
+        Me.ToolTip1.SetToolTip(Me.checkbox_balance, "Forces all settings in ""Primary Stats + Effect"" to be enabled." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Attempts to mak" &
+        "e balanced moves for less chaotic playthroughs.")
+        Me.checkbox_balance.UseVisualStyleBackColor = True
         '
         'GroupBox3
         '
-        Me.GroupBox3.Controls.Add(Me.rndcat)
-        Me.GroupBox3.Controls.Add(Me.rndeffect)
-        Me.GroupBox3.Controls.Add(Me.rndtarget)
-        Me.GroupBox3.Controls.Add(Me.rndtype)
-        Me.GroupBox3.Location = New System.Drawing.Point(168, 54)
+        Me.GroupBox3.Controls.Add(Me.checkbox_rnd_category)
+        Me.GroupBox3.Controls.Add(Me.checkbox_rnd_element)
+        Me.GroupBox3.Location = New System.Drawing.Point(168, 107)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(141, 117)
+        Me.GroupBox3.Size = New System.Drawing.Size(140, 100)
         Me.GroupBox3.TabIndex = 9
         Me.GroupBox3.TabStop = False
-        Me.GroupBox3.Text = "Effects and Other"
+        Me.GroupBox3.Text = "Typing + Misc"
         '
-        'rndcat
+        'checkbox_rnd_category
         '
-        Me.rndcat.AutoSize = True
-        Me.rndcat.Location = New System.Drawing.Point(5, 89)
-        Me.rndcat.Name = "rndcat"
-        Me.rndcat.Size = New System.Drawing.Size(124, 17)
-        Me.rndcat.TabIndex = 4
-        Me.rndcat.Text = "Randomize Category"
-        Me.ToolTip1.SetToolTip(Me.rndcat, resources.GetString("rndcat.ToolTip"))
-        Me.rndcat.UseVisualStyleBackColor = True
+        Me.checkbox_rnd_category.AutoSize = True
+        Me.checkbox_rnd_category.Location = New System.Drawing.Point(5, 40)
+        Me.checkbox_rnd_category.Name = "checkbox_rnd_category"
+        Me.checkbox_rnd_category.Size = New System.Drawing.Size(124, 17)
+        Me.checkbox_rnd_category.TabIndex = 4
+        Me.checkbox_rnd_category.Text = "Randomize Category"
+        Me.ToolTip1.SetToolTip(Me.checkbox_rnd_category, resources.GetString("checkbox_rnd_category.ToolTip"))
+        Me.checkbox_rnd_category.UseVisualStyleBackColor = True
         '
-        'rndeffect
+        'checkbox_rnd_element
         '
-        Me.rndeffect.AutoSize = True
-        Me.rndeffect.Location = New System.Drawing.Point(5, 68)
-        Me.rndeffect.Name = "rndeffect"
-        Me.rndeffect.Size = New System.Drawing.Size(110, 17)
-        Me.rndeffect.TabIndex = 3
-        Me.rndeffect.Text = "Randomize Effect"
-        Me.ToolTip1.SetToolTip(Me.rndeffect, "Randomizes the effect of the" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "move and its effect chance" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "as well as flags like" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & _
-                "wether it makes contact" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "or not." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "(It will also change the" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "description of the" & _
-                " move" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "to match the effect!)")
-        Me.rndeffect.UseVisualStyleBackColor = True
+        Me.checkbox_rnd_element.AutoSize = True
+        Me.checkbox_rnd_element.Location = New System.Drawing.Point(5, 20)
+        Me.checkbox_rnd_element.Name = "checkbox_rnd_element"
+        Me.checkbox_rnd_element.Size = New System.Drawing.Size(106, 17)
+        Me.checkbox_rnd_element.TabIndex = 1
+        Me.checkbox_rnd_element.Text = "Randomize Type"
+        Me.ToolTip1.SetToolTip(Me.checkbox_rnd_element, "Randomizes the typing of moves.")
+        Me.checkbox_rnd_element.UseVisualStyleBackColor = True
         '
-        'rndtarget
+        'checkbox_rnd_name
         '
-        Me.rndtarget.AutoSize = True
-        Me.rndtarget.Location = New System.Drawing.Point(5, 47)
-        Me.rndtarget.Name = "rndtarget"
-        Me.rndtarget.Size = New System.Drawing.Size(113, 17)
-        Me.rndtarget.TabIndex = 2
-        Me.rndtarget.Text = "Randomize Target"
-        Me.ToolTip1.SetToolTip(Me.rndtarget, "Randomizes the target(s) of" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "the attack." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "(This will not make stat" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "boosting mo" & _
-                "ves target" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "enemies or damaging" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "moves target the user.)")
-        Me.rndtarget.UseVisualStyleBackColor = True
-        '
-        'rndtype
-        '
-        Me.rndtype.AutoSize = True
-        Me.rndtype.Location = New System.Drawing.Point(5, 24)
-        Me.rndtype.Name = "rndtype"
-        Me.rndtype.Size = New System.Drawing.Size(106, 17)
-        Me.rndtype.TabIndex = 1
-        Me.rndtype.Text = "Randomize Type"
-        Me.ToolTip1.SetToolTip(Me.rndtype, "Randomizes the attack's type." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "(Moves that are ??? type will" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "always have a bas" & _
-                "e power of 10" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "if they deal damage due to how" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "the Gen 3 games work.)")
-        Me.rndtype.UseVisualStyleBackColor = True
-        '
-        'rndname
-        '
-        Me.rndname.AutoSize = True
-        Me.rndname.Location = New System.Drawing.Point(6, 16)
-        Me.rndname.Name = "rndname"
-        Me.rndname.Size = New System.Drawing.Size(115, 17)
-        Me.rndname.TabIndex = 0
-        Me.rndname.Text = "Randomize Names"
-        Me.ToolTip1.SetToolTip(Me.rndname, "Combines two words from" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "a pool to create a name." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "(This isn't context sensitiv" & _
-                "e" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "so you could get a move" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "called FirePunch despite" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "being water type)")
-        Me.rndname.UseVisualStyleBackColor = True
+        Me.checkbox_rnd_name.AutoSize = True
+        Me.checkbox_rnd_name.Location = New System.Drawing.Point(6, 20)
+        Me.checkbox_rnd_name.Name = "checkbox_rnd_name"
+        Me.checkbox_rnd_name.Size = New System.Drawing.Size(115, 17)
+        Me.checkbox_rnd_name.TabIndex = 0
+        Me.checkbox_rnd_name.Text = "Randomize Names"
+        Me.ToolTip1.SetToolTip(Me.checkbox_rnd_name, "Combines two words from" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "a pool to create a name.")
+        Me.checkbox_rnd_name.UseVisualStyleBackColor = True
         '
         'GroupBox1
         '
         Me.GroupBox1.Controls.Add(Me.lstboxgame)
-        Me.GroupBox1.Location = New System.Drawing.Point(315, 54)
+        Me.GroupBox1.Location = New System.Drawing.Point(204, 53)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(135, 53)
+        Me.GroupBox1.Size = New System.Drawing.Size(246, 48)
         Me.GroupBox1.TabIndex = 10
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "ROM Version/Info"
@@ -227,19 +219,19 @@ Partial Class Form1
         'lstboxgame
         '
         Me.lstboxgame.FormattingEnabled = True
-        Me.lstboxgame.Items.AddRange(New Object() {"None/Unsupported", "Ruby (U) 1.1", "Sapphire (U)  1.1", "Emerald (U)", "Fire Red (U) 1.0", "Fire Red (U) 1.1", "Leaf Green (U) 1.1"})
+        Me.lstboxgame.Items.AddRange(New Object() {"Unsupported", "Custom", "Fire Red USA 1.0", "Emerald USA"})
         Me.lstboxgame.Location = New System.Drawing.Point(8, 19)
         Me.lstboxgame.Name = "lstboxgame"
-        Me.lstboxgame.Size = New System.Drawing.Size(121, 21)
+        Me.lstboxgame.Size = New System.Drawing.Size(228, 21)
         Me.lstboxgame.TabIndex = 0
-        Me.lstboxgame.Text = "None/Unsupported"
+        Me.lstboxgame.Text = "Unsupported"
         '
         'MenuStrip1
         '
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem1})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(476, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(466, 24)
         Me.MenuStrip1.TabIndex = 11
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -266,54 +258,136 @@ Partial Class Form1
         Me.ToolTip1.InitialDelay = 500
         Me.ToolTip1.ReshowDelay = 100
         '
-        'context
+        'checkbox_rnd_name_context
         '
-        Me.context.AutoSize = True
-        Me.context.Location = New System.Drawing.Point(6, 36)
-        Me.context.Name = "context"
-        Me.context.Size = New System.Drawing.Size(76, 17)
-        Me.context.TabIndex = 1
-        Me.context.Text = "Contextual"
-        Me.ToolTip1.SetToolTip(Me.context, "Actually renames" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "attacks based on their" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "type and category.")
-        Me.context.UseVisualStyleBackColor = True
+        Me.checkbox_rnd_name_context.AutoSize = True
+        Me.checkbox_rnd_name_context.Location = New System.Drawing.Point(6, 40)
+        Me.checkbox_rnd_name_context.Name = "checkbox_rnd_name_context"
+        Me.checkbox_rnd_name_context.Size = New System.Drawing.Size(76, 17)
+        Me.checkbox_rnd_name_context.TabIndex = 1
+        Me.checkbox_rnd_name_context.Text = "Contextual"
+        Me.ToolTip1.SetToolTip(Me.checkbox_rnd_name_context, "Names moves based on their type and category to" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "form somewhat logical names.")
+        Me.checkbox_rnd_name_context.UseVisualStyleBackColor = True
         '
-        'rounder
+        'checkbox_limit_effects
         '
-        Me.rounder.AutoSize = True
-        Me.rounder.Location = New System.Drawing.Point(6, 16)
-        Me.rounder.Name = "rounder"
-        Me.rounder.Size = New System.Drawing.Size(97, 17)
-        Me.rounder.TabIndex = 14
-        Me.rounder.Text = "Rounded Stats"
-        Me.ToolTip1.SetToolTip(Me.rounder, resources.GetString("rounder.ToolTip"))
-        Me.rounder.UseVisualStyleBackColor = True
+        Me.checkbox_limit_effects.AutoSize = True
+        Me.checkbox_limit_effects.Location = New System.Drawing.Point(6, 37)
+        Me.checkbox_limit_effects.Name = "checkbox_limit_effects"
+        Me.checkbox_limit_effects.Size = New System.Drawing.Size(119, 17)
+        Me.checkbox_limit_effects.TabIndex = 15
+        Me.checkbox_limit_effects.Text = "Limit Certain Effects"
+        Me.ToolTip1.SetToolTip(Me.checkbox_limit_effects, resources.GetString("checkbox_limit_effects.ToolTip"))
+        Me.checkbox_limit_effects.UseVisualStyleBackColor = True
+        '
+        'checkbox_rnd_anim_context
+        '
+        Me.checkbox_rnd_anim_context.AutoSize = True
+        Me.checkbox_rnd_anim_context.Location = New System.Drawing.Point(6, 40)
+        Me.checkbox_rnd_anim_context.Name = "checkbox_rnd_anim_context"
+        Me.checkbox_rnd_anim_context.Size = New System.Drawing.Size(76, 17)
+        Me.checkbox_rnd_anim_context.TabIndex = 1
+        Me.checkbox_rnd_anim_context.Text = "Contextual"
+        Me.ToolTip1.SetToolTip(Me.checkbox_rnd_anim_context, "Animations are selected based on their type and" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "category rather than completely " &
+        "random." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Note that some move effects can enforce a specific" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "animation.")
+        Me.checkbox_rnd_anim_context.UseVisualStyleBackColor = True
+        '
+        'checkbox_rnd_anim
+        '
+        Me.checkbox_rnd_anim.AutoSize = True
+        Me.checkbox_rnd_anim.Location = New System.Drawing.Point(6, 20)
+        Me.checkbox_rnd_anim.Name = "checkbox_rnd_anim"
+        Me.checkbox_rnd_anim.Size = New System.Drawing.Size(133, 17)
+        Me.checkbox_rnd_anim.TabIndex = 0
+        Me.checkbox_rnd_anim.Text = "Randomize Animations"
+        Me.ToolTip1.SetToolTip(Me.checkbox_rnd_anim, "Gives moves a random animation" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "from the game itself.")
+        Me.checkbox_rnd_anim.UseVisualStyleBackColor = True
         '
         'GroupBox2
         '
-        Me.GroupBox2.Controls.Add(Me.context)
-        Me.GroupBox2.Controls.Add(Me.rndname)
-        Me.GroupBox2.Location = New System.Drawing.Point(315, 113)
+        Me.GroupBox2.Controls.Add(Me.checkbox_rnd_name_context)
+        Me.GroupBox2.Controls.Add(Me.checkbox_rnd_name)
+        Me.GroupBox2.Location = New System.Drawing.Point(319, 107)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(135, 58)
+        Me.GroupBox2.Size = New System.Drawing.Size(140, 97)
         Me.GroupBox2.TabIndex = 12
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Naming"
         '
         'GroupBox4
         '
-        Me.GroupBox4.Controls.Add(Me.rounder)
-        Me.GroupBox4.Location = New System.Drawing.Point(21, 177)
+        Me.GroupBox4.Controls.Add(Me.checkbox_buff_normal)
+        Me.GroupBox4.Controls.Add(Me.checkbox_balance)
+        Me.GroupBox4.Controls.Add(Me.checkbox_limit_effects)
+        Me.GroupBox4.Location = New System.Drawing.Point(21, 218)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(429, 39)
+        Me.GroupBox4.Size = New System.Drawing.Size(140, 79)
         Me.GroupBox4.TabIndex = 13
         Me.GroupBox4.TabStop = False
-        Me.GroupBox4.Text = "Last Minute Feature"
+        Me.GroupBox4.Text = "Balancing"
+        '
+        'GroupBox6
+        '
+        Me.GroupBox6.Controls.Add(Me.checkbox_rnd_anim_context)
+        Me.GroupBox6.Controls.Add(Me.checkbox_rnd_anim)
+        Me.GroupBox6.Location = New System.Drawing.Point(319, 218)
+        Me.GroupBox6.Name = "GroupBox6"
+        Me.GroupBox6.Size = New System.Drawing.Size(140, 79)
+        Me.GroupBox6.TabIndex = 13
+        Me.GroupBox6.TabStop = False
+        Me.GroupBox6.Text = "Animation"
+        '
+        'GroupBox5
+        '
+        Me.GroupBox5.Controls.Add(Me.checkbox_ignore_struggle)
+        Me.GroupBox5.Controls.Add(Me.checkbox_tweak_semi)
+        Me.GroupBox5.Location = New System.Drawing.Point(168, 218)
+        Me.GroupBox5.Name = "GroupBox5"
+        Me.GroupBox5.Size = New System.Drawing.Size(140, 79)
+        Me.GroupBox5.TabIndex = 16
+        Me.GroupBox5.TabStop = False
+        Me.GroupBox5.Text = "Move Specific"
+        '
+        'checkbox_ignore_struggle
+        '
+        Me.checkbox_ignore_struggle.AutoSize = True
+        Me.checkbox_ignore_struggle.Location = New System.Drawing.Point(6, 20)
+        Me.checkbox_ignore_struggle.Name = "checkbox_ignore_struggle"
+        Me.checkbox_ignore_struggle.Size = New System.Drawing.Size(98, 17)
+        Me.checkbox_ignore_struggle.TabIndex = 13
+        Me.checkbox_ignore_struggle.Text = "Ignore Struggle"
+        Me.ToolTip1.SetToolTip(Me.checkbox_ignore_struggle, "The move ""Struggle"" will be left untouched by randomization.")
+        Me.checkbox_ignore_struggle.UseVisualStyleBackColor = True
+        '
+        'checkbox_tweak_semi
+        '
+        Me.checkbox_tweak_semi.AutoSize = True
+        Me.checkbox_tweak_semi.Location = New System.Drawing.Point(6, 40)
+        Me.checkbox_tweak_semi.Name = "checkbox_tweak_semi"
+        Me.checkbox_tweak_semi.Size = New System.Drawing.Size(114, 17)
+        Me.checkbox_tweak_semi.TabIndex = 15
+        Me.checkbox_tweak_semi.Text = "Ignore Semi-Invuln"
+        Me.ToolTip1.SetToolTip(Me.checkbox_tweak_semi, resources.GetString("checkbox_tweak_semi.ToolTip"))
+        Me.checkbox_tweak_semi.UseVisualStyleBackColor = True
+        '
+        'checkbox_buff_normal
+        '
+        Me.checkbox_buff_normal.AutoSize = True
+        Me.checkbox_buff_normal.Location = New System.Drawing.Point(6, 57)
+        Me.checkbox_buff_normal.Name = "checkbox_buff_normal"
+        Me.checkbox_buff_normal.Size = New System.Drawing.Size(108, 17)
+        Me.checkbox_buff_normal.TabIndex = 16
+        Me.checkbox_buff_normal.Text = "Buff Normal Type"
+        Me.ToolTip1.SetToolTip(Me.checkbox_buff_normal, "Makes Normal attacks roll slightly higher stats.")
+        Me.checkbox_buff_normal.UseVisualStyleBackColor = True
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(476, 239)
+        Me.ClientSize = New System.Drawing.Size(466, 309)
+        Me.Controls.Add(Me.GroupBox5)
+        Me.Controls.Add(Me.GroupBox6)
         Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
@@ -326,12 +400,12 @@ Partial Class Form1
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.MainMenuStrip = Me.MenuStrip1
         Me.MaximizeBox = False
-        Me.MaximumSize = New System.Drawing.Size(482, 268)
+        Me.MaximumSize = New System.Drawing.Size(482, 348)
         Me.MinimizeBox = False
-        Me.MinimumSize = New System.Drawing.Size(482, 268)
+        Me.MinimumSize = New System.Drawing.Size(482, 348)
         Me.Name = "Form1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
-        Me.Text = "Gen3MoveRandomizer"
+        Me.Text = "Gen3MoveRandomizer v1.1.0"
         Me.rndacc.ResumeLayout(False)
         Me.rndacc.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
@@ -343,6 +417,10 @@ Partial Class Form1
         Me.GroupBox2.PerformLayout()
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
+        Me.GroupBox6.ResumeLayout(False)
+        Me.GroupBox6.PerformLayout()
+        Me.GroupBox5.ResumeLayout(False)
+        Me.GroupBox5.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -352,14 +430,13 @@ Partial Class Form1
     Friend WithEvents startrand As System.Windows.Forms.Button
     Friend WithEvents rndacc As System.Windows.Forms.GroupBox
     Friend WithEvents GroupBox3 As System.Windows.Forms.GroupBox
-    Friend WithEvents rndpower As System.Windows.Forms.CheckBox
-    Friend WithEvents rndaccurate As System.Windows.Forms.CheckBox
-    Friend WithEvents balancestats As System.Windows.Forms.CheckBox
-    Friend WithEvents rndpp As System.Windows.Forms.CheckBox
-    Friend WithEvents rndname As System.Windows.Forms.CheckBox
-    Friend WithEvents rndtype As System.Windows.Forms.CheckBox
-    Friend WithEvents rndeffect As System.Windows.Forms.CheckBox
-    Friend WithEvents rndtarget As System.Windows.Forms.CheckBox
+    Friend WithEvents checkbox_rnd_power As System.Windows.Forms.CheckBox
+    Friend WithEvents checkbox_rnd_accuracy As System.Windows.Forms.CheckBox
+    Friend WithEvents checkbox_balance As System.Windows.Forms.CheckBox
+    Friend WithEvents checkbox_rnd_pp As System.Windows.Forms.CheckBox
+    Friend WithEvents checkbox_rnd_name As System.Windows.Forms.CheckBox
+    Friend WithEvents checkbox_rnd_element As System.Windows.Forms.CheckBox
+    Friend WithEvents checkbox_rnd_effect As System.Windows.Forms.CheckBox
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
     Friend WithEvents ToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
@@ -367,10 +444,16 @@ Partial Class Form1
     Friend WithEvents OpenFile As System.Windows.Forms.OpenFileDialog
     Friend WithEvents ToolTip1 As System.Windows.Forms.ToolTip
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
-    Friend WithEvents rndcat As System.Windows.Forms.CheckBox
-    Friend WithEvents context As System.Windows.Forms.CheckBox
+    Friend WithEvents checkbox_rnd_category As System.Windows.Forms.CheckBox
+    Friend WithEvents checkbox_rnd_name_context As System.Windows.Forms.CheckBox
     Friend WithEvents lstboxgame As System.Windows.Forms.ComboBox
-    Friend WithEvents rounder As System.Windows.Forms.CheckBox
     Friend WithEvents GroupBox4 As System.Windows.Forms.GroupBox
-
+    Friend WithEvents checkbox_limit_effects As CheckBox
+    Friend WithEvents GroupBox6 As GroupBox
+    Friend WithEvents checkbox_rnd_anim_context As CheckBox
+    Friend WithEvents checkbox_rnd_anim As CheckBox
+    Friend WithEvents GroupBox5 As GroupBox
+    Friend WithEvents checkbox_ignore_struggle As CheckBox
+    Friend WithEvents checkbox_tweak_semi As CheckBox
+    Friend WithEvents checkbox_buff_normal As CheckBox
 End Class

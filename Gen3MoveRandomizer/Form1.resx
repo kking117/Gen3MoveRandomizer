@@ -120,23 +120,13 @@
   <metadata name="ToolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>232, 17</value>
   </metadata>
-  <metadata name="ToolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>232, 17</value>
-  </metadata>
-  <data name="rndcat.ToolTip" xml:space="preserve">
-    <value>Randomizes the category of the
-move (physical, special, status).
-With some exceptions based on
-the move's effect.
+  <data name="checkbox_rnd_category.ToolTip" xml:space="preserve">
+    <value>Randomizes the category of the move (Physical, Special, Status)
+with some exceptions based on the move's effect.
 
-(This effectively does nothing
-without a split patch.)
-
-(If this is not enabled when
-randomizing the category
-will be defaulted based on
-its type exactly like the
-vanilla games.)</value>
+Note:
+When enabled it will affect if a move makes contact or not if "Randomize Effect" is enabled.
+A rom patched to support Physical/Special split is required to take full advantage of this.</value>
   </data>
   <metadata name="MenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
@@ -144,16 +134,23 @@ vanilla games.)</value>
   <metadata name="OpenFile.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>132, 17</value>
   </metadata>
-  <data name="rounder.ToolTip" xml:space="preserve">
-    <value>This will round Power, Accuracy,
-PP and Effect Chance to the nearest
-multiple of 5. This will make randomized
-moves feel more authentic.
+  <data name="checkbox_limit_effects.ToolTip" xml:space="preserve">
+    <value>Forces "Randomize Effect" to be enabled.
 
-(This has no effect on stats that don't
-get changed.)
+Prevents all Types from getting multiple moves with the same effect.
+Example:
+Fire would not be able to get more than 1 move with Dragon Dance's Effect.
 
-(Comet Punch goes against this
-standard, but we don't talk about that.)</value>
+Note:
+This is mainly for Status moves, but also works for other effects that
+use special damage formulas such as Present, Low Kick and Sonicboom.</value>
+  </data>
+  <data name="checkbox_tweak_semi.ToolTip" xml:space="preserve">
+    <value>In Generation 3 of Pokemon, the moves
+Bounce, Dig, Dive and Fly are hardcoded.
+
+This setting prevents this effect from being
+rolled. It also stops the moves using this effect
+from being randomized.</value>
   </data>
 </root>
