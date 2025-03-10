@@ -1,3 +1,5 @@
+Rainbow
+Radiant
 Tri-
 Rapid
 Fury
@@ -54,3 +56,6 @@ Hidden
 Powder
 Plain
 Multi-
+Normal
+Neutral
+Pure

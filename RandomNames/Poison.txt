@@ -1,4 +1,5 @@
 Gunk
+Grime
 Venom
 Veno
 Acid
@@ -8,3 +9,12 @@ Toxic
 Smog
 Gastro
 Acidic
+Virulent
+Blight
+Necrosis
+Caustic
+Noxious
+Bane
+Corrupt
+Tainted
+Decay

@@ -9,3 +9,11 @@ Beak
 Gale
 Wind
 Strato
+Heaven
+Meteo
+Acro
+Falcon
+Talon
+Ascent
+Stream
+Rising

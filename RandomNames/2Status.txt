@@ -29,5 +29,16 @@ Drench
 Impulse
 Swap
 Shift
+Ray
 Whistle
 Chime
+Goad
+Curse
+Zone
+Hold
+Grip
+Bind
+Panic
+Shatter
+Stare
+Blight

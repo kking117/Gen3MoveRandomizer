@@ -1,5 +1,4 @@
 Gem
-Sap
 Wave
 Beam
 Bolt
@@ -23,6 +22,7 @@ Drench
 Thrower
 Tornado
 Impulse
+Tempest
 Out
 Off
 Gas
@@ -45,3 +45,13 @@ Meteor
 Ray
 Rain
 Hail
+Vent
+Snipe
+Slice
+Geyser
+Nova
+End
+Star
+Volley
+Spell
+Cast
