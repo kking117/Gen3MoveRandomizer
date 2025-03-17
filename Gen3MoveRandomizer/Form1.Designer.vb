@@ -48,13 +48,16 @@ Partial Class Form1
         Me.checkbox_limit_effects = New System.Windows.Forms.CheckBox()
         Me.checkbox_rnd_anim_context = New System.Windows.Forms.CheckBox()
         Me.checkbox_rnd_anim = New System.Windows.Forms.CheckBox()
+        Me.checkbox_ignore_struggle = New System.Windows.Forms.CheckBox()
+        Me.checkbox_tweak_semi = New System.Windows.Forms.CheckBox()
+        Me.checkbox_buff_normal = New System.Windows.Forms.CheckBox()
+        Me.checkbox_mod_priority = New System.Windows.Forms.CheckBox()
+        Me.checkbox_mod_accuracy = New System.Windows.Forms.CheckBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.GroupBox6 = New System.Windows.Forms.GroupBox()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
-        Me.checkbox_ignore_struggle = New System.Windows.Forms.CheckBox()
-        Me.checkbox_tweak_semi = New System.Windows.Forms.CheckBox()
-        Me.checkbox_buff_normal = New System.Windows.Forms.CheckBox()
+        Me.GroupBox7 = New System.Windows.Forms.GroupBox()
         Me.rndacc.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -63,6 +66,7 @@ Partial Class Form1
         Me.GroupBox4.SuspendLayout()
         Me.GroupBox6.SuspendLayout()
         Me.GroupBox5.SuspendLayout()
+        Me.GroupBox7.SuspendLayout()
         Me.SuspendLayout()
         '
         'patchfile
@@ -214,7 +218,7 @@ Partial Class Form1
         Me.GroupBox1.Size = New System.Drawing.Size(246, 48)
         Me.GroupBox1.TabIndex = 10
         Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "ROM Version/Info"
+        Me.GroupBox1.Text = "ROM Version/Preset"
         '
         'lstboxgame
         '
@@ -303,6 +307,62 @@ Partial Class Form1
         Me.ToolTip1.SetToolTip(Me.checkbox_rnd_anim, "Gives moves a random animation" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "from the game itself.")
         Me.checkbox_rnd_anim.UseVisualStyleBackColor = True
         '
+        'checkbox_ignore_struggle
+        '
+        Me.checkbox_ignore_struggle.AutoSize = True
+        Me.checkbox_ignore_struggle.Location = New System.Drawing.Point(6, 20)
+        Me.checkbox_ignore_struggle.Name = "checkbox_ignore_struggle"
+        Me.checkbox_ignore_struggle.Size = New System.Drawing.Size(98, 17)
+        Me.checkbox_ignore_struggle.TabIndex = 13
+        Me.checkbox_ignore_struggle.Text = "Ignore Struggle"
+        Me.ToolTip1.SetToolTip(Me.checkbox_ignore_struggle, "The move ""Struggle"" will be left untouched by randomization.")
+        Me.checkbox_ignore_struggle.UseVisualStyleBackColor = True
+        '
+        'checkbox_tweak_semi
+        '
+        Me.checkbox_tweak_semi.AutoSize = True
+        Me.checkbox_tweak_semi.Location = New System.Drawing.Point(6, 40)
+        Me.checkbox_tweak_semi.Name = "checkbox_tweak_semi"
+        Me.checkbox_tweak_semi.Size = New System.Drawing.Size(114, 17)
+        Me.checkbox_tweak_semi.TabIndex = 15
+        Me.checkbox_tweak_semi.Text = "Ignore Semi-Invuln"
+        Me.ToolTip1.SetToolTip(Me.checkbox_tweak_semi, resources.GetString("checkbox_tweak_semi.ToolTip"))
+        Me.checkbox_tweak_semi.UseVisualStyleBackColor = True
+        '
+        'checkbox_buff_normal
+        '
+        Me.checkbox_buff_normal.AutoSize = True
+        Me.checkbox_buff_normal.Location = New System.Drawing.Point(6, 57)
+        Me.checkbox_buff_normal.Name = "checkbox_buff_normal"
+        Me.checkbox_buff_normal.Size = New System.Drawing.Size(108, 17)
+        Me.checkbox_buff_normal.TabIndex = 16
+        Me.checkbox_buff_normal.Text = "Buff Normal Type"
+        Me.ToolTip1.SetToolTip(Me.checkbox_buff_normal, "Allows Normal attacks to roll slightly higher stats.")
+        Me.checkbox_buff_normal.UseVisualStyleBackColor = True
+        '
+        'checkbox_mod_priority
+        '
+        Me.checkbox_mod_priority.AutoSize = True
+        Me.checkbox_mod_priority.Location = New System.Drawing.Point(6, 20)
+        Me.checkbox_mod_priority.Name = "checkbox_mod_priority"
+        Me.checkbox_mod_priority.Size = New System.Drawing.Size(101, 17)
+        Me.checkbox_mod_priority.TabIndex = 13
+        Me.checkbox_mod_priority.Text = "Upgrade Priority"
+        Me.ToolTip1.SetToolTip(Me.checkbox_mod_priority, "Moves with a Priority of 0 can be upgraded" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "to +1 Priority.")
+        Me.checkbox_mod_priority.UseVisualStyleBackColor = True
+        '
+        'checkbox_mod_accuracy
+        '
+        Me.checkbox_mod_accuracy.AutoSize = True
+        Me.checkbox_mod_accuracy.Location = New System.Drawing.Point(6, 40)
+        Me.checkbox_mod_accuracy.Name = "checkbox_mod_accuracy"
+        Me.checkbox_mod_accuracy.Size = New System.Drawing.Size(115, 17)
+        Me.checkbox_mod_accuracy.TabIndex = 15
+        Me.checkbox_mod_accuracy.Text = "Upgrade Accuracy"
+        Me.ToolTip1.SetToolTip(Me.checkbox_mod_accuracy, "HACK FEATURE" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Requires a patched ROM that" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "supports bypassing accuracy" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "checks wh" &
+        "en a move has 0 accuracy." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Moves can be Upgraded to bypass" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "accuracy checks.")
+        Me.checkbox_mod_accuracy.UseVisualStyleBackColor = True
+        '
         'GroupBox2
         '
         Me.GroupBox2.Controls.Add(Me.checkbox_rnd_name_context)
@@ -348,44 +408,23 @@ Partial Class Form1
         Me.GroupBox5.TabStop = False
         Me.GroupBox5.Text = "Move Specific"
         '
-        'checkbox_ignore_struggle
+        'GroupBox7
         '
-        Me.checkbox_ignore_struggle.AutoSize = True
-        Me.checkbox_ignore_struggle.Location = New System.Drawing.Point(6, 20)
-        Me.checkbox_ignore_struggle.Name = "checkbox_ignore_struggle"
-        Me.checkbox_ignore_struggle.Size = New System.Drawing.Size(98, 17)
-        Me.checkbox_ignore_struggle.TabIndex = 13
-        Me.checkbox_ignore_struggle.Text = "Ignore Struggle"
-        Me.ToolTip1.SetToolTip(Me.checkbox_ignore_struggle, "The move ""Struggle"" will be left untouched by randomization.")
-        Me.checkbox_ignore_struggle.UseVisualStyleBackColor = True
-        '
-        'checkbox_tweak_semi
-        '
-        Me.checkbox_tweak_semi.AutoSize = True
-        Me.checkbox_tweak_semi.Location = New System.Drawing.Point(6, 40)
-        Me.checkbox_tweak_semi.Name = "checkbox_tweak_semi"
-        Me.checkbox_tweak_semi.Size = New System.Drawing.Size(114, 17)
-        Me.checkbox_tweak_semi.TabIndex = 15
-        Me.checkbox_tweak_semi.Text = "Ignore Semi-Invuln"
-        Me.ToolTip1.SetToolTip(Me.checkbox_tweak_semi, resources.GetString("checkbox_tweak_semi.ToolTip"))
-        Me.checkbox_tweak_semi.UseVisualStyleBackColor = True
-        '
-        'checkbox_buff_normal
-        '
-        Me.checkbox_buff_normal.AutoSize = True
-        Me.checkbox_buff_normal.Location = New System.Drawing.Point(6, 57)
-        Me.checkbox_buff_normal.Name = "checkbox_buff_normal"
-        Me.checkbox_buff_normal.Size = New System.Drawing.Size(108, 17)
-        Me.checkbox_buff_normal.TabIndex = 16
-        Me.checkbox_buff_normal.Text = "Buff Normal Type"
-        Me.ToolTip1.SetToolTip(Me.checkbox_buff_normal, "Makes Normal attacks roll slightly higher stats.")
-        Me.checkbox_buff_normal.UseVisualStyleBackColor = True
+        Me.GroupBox7.Controls.Add(Me.checkbox_mod_priority)
+        Me.GroupBox7.Controls.Add(Me.checkbox_mod_accuracy)
+        Me.GroupBox7.Location = New System.Drawing.Point(21, 303)
+        Me.GroupBox7.Name = "GroupBox7"
+        Me.GroupBox7.Size = New System.Drawing.Size(438, 79)
+        Me.GroupBox7.TabIndex = 17
+        Me.GroupBox7.TabStop = False
+        Me.GroupBox7.Text = "Other"
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(466, 309)
+        Me.ClientSize = New System.Drawing.Size(466, 389)
+        Me.Controls.Add(Me.GroupBox7)
         Me.Controls.Add(Me.GroupBox5)
         Me.Controls.Add(Me.GroupBox6)
         Me.Controls.Add(Me.GroupBox4)
@@ -400,9 +439,9 @@ Partial Class Form1
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.MainMenuStrip = Me.MenuStrip1
         Me.MaximizeBox = False
-        Me.MaximumSize = New System.Drawing.Size(482, 348)
+        Me.MaximumSize = New System.Drawing.Size(482, 428)
         Me.MinimizeBox = False
-        Me.MinimumSize = New System.Drawing.Size(482, 348)
+        Me.MinimumSize = New System.Drawing.Size(482, 428)
         Me.Name = "Form1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Gen3MoveRandomizer v1.1.0"
@@ -421,6 +460,8 @@ Partial Class Form1
         Me.GroupBox6.PerformLayout()
         Me.GroupBox5.ResumeLayout(False)
         Me.GroupBox5.PerformLayout()
+        Me.GroupBox7.ResumeLayout(False)
+        Me.GroupBox7.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -456,4 +497,7 @@ Partial Class Form1
     Friend WithEvents checkbox_ignore_struggle As CheckBox
     Friend WithEvents checkbox_tweak_semi As CheckBox
     Friend WithEvents checkbox_buff_normal As CheckBox
+    Friend WithEvents GroupBox7 As GroupBox
+    Friend WithEvents checkbox_mod_priority As CheckBox
+    Friend WithEvents checkbox_mod_accuracy As CheckBox
 End Class

@@ -15,7 +15,12 @@ Public Class Form1
         Category = 10
         Unused2 = 12
     End Enum
-
+    Enum AnimationDataIndex
+        AnimAdress = 0
+        Type = 1
+        Bracket = 2
+        AnimFlags = 3
+    End Enum
     Enum EffectDataIndex
         EffectIndex = 0
         UsePower = 1
@@ -32,7 +37,7 @@ Public Class Form1
         Limited = 12
         FixedEffectChance = 13
         BonusPoints = 14
-        SemiMove = 15
+        EffectFlags = 15
     End Enum
 
     Enum TargetFlags
@@ -53,6 +58,15 @@ Public Class Form1
         AllowMirrorMove = 16
         AllowKingRock = 32
     End Enum
+    Enum EffectFlags
+        None = 0
+        SemiMove = 1
+        MultiHit = 2
+    End Enum
+    Enum AnimFlags
+        None = 0
+        IsLong = 1
+    End Enum
     Enum TypeIndex
         Normal = 0
         Fighting = 1
@@ -72,6 +86,8 @@ Public Class Form1
         Ice = 15
         Dragon = 16
         Dark = 17
+        Fairy = 18
+        MaxTypes = 19
     End Enum
 
     Dim fs As FileStream
@@ -126,7 +142,8 @@ Public Class Form1
     '300 = the word, index 0 is used to track the max entries
 
     'VersionInfo Data
-    Dim GameData_Path As String = Application.StartupPath & "\VersionInfo\"
+    Dim GameData_Path As String = Application.StartupPath & "\Presets\"
+    Dim PresetData_Path As String = GameData_Path & "Presets.txt"
     Dim FireRedUSA10 As String = GameData_Path & "Fire Red USA 1.0.txt"
     Dim GameData_MoveTable_StartAddress As String
     Dim GameData_NameTable_StartAddress As String
@@ -144,16 +161,20 @@ Public Class Form1
     '1 = Force Animation Hex Address
     '2 = Spoiler Description Text
 
-    Dim GameData_AnimAddress(17, 4, 255) As Integer
-    '17 = the typing
-    '4 = low, mid, high power or buff or debuff
-    '255 = the animation hex address, index 0 is reserved as the max count tracker
+    Dim GameData_AnimAddress(1000, 5) As Integer
+    '1000 = the animation index, index 0 is reserved as the max count tracker
+
     Dim GameData_NaturePower_Name(100) As String
     Dim GameData_NaturePower_Index(100) As Integer
     '0 is used as the max count tracker
     Dim MoveIndex_BlackList(500) As Integer
     Dim SemiMove_BlackList(500) As Integer
-
+    '
+    Dim LookTable_Power() = {0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100, 105, 110, 115, 120, 125, 130, 135, 140, 145, 150, 155, 160, 165, 170, 175, 180, 185, 190, 195, 200, 205, 210, 215, 220, 225, 230, 235, 240, 245, 250, 255}
+    Dim LookTable_Power_Multi() = {0, 5, 10, 15, 18, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100, 105, 110, 115, 120, 125, 130, 135, 140, 145, 150, 155, 160, 165, 170, 175, 180, 185, 190, 195, 200, 205, 210, 215, 220, 225, 230, 235, 240, 245, 250, 255}
+    Dim LookTable_Accuracy() = {0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100, 105, 110, 115, 120, 125, 130, 135, 140, 145, 150, 155, 160, 165, 170, 175, 180, 185, 190, 195, 200, 205, 210, 215, 220, 225, 230, 235, 240, 245, 250, 255}
+    Dim LookTable_PP() = {0, 5, 10, 15, 20, 25, 30, 35, 40}
+    Dim LookTable_EffectChance() = {0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100}
     Private Sub LoadRomToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OpenRomToolStripMenuItem.Click
         OpenFile.Title = "Select ROM File"
         OpenFile.InitialDirectory = Application.StartupPath
@@ -232,7 +253,7 @@ Public Class Form1
     End Sub
 
     Private Sub startrand_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles startrand.Click
-        If My.Computer.FileSystem.FileExists(patchfile.Text) And GameType > 0 Then
+        If My.Computer.FileSystem.FileExists(patchfile.Text) And GameType > -1 Then
             Randomize()
             Dim address As String
             fs = New FileStream(patchfile.Text, FileMode.Open)
@@ -247,22 +268,22 @@ Public Class Form1
             SetupGameData(lstboxgame.Text)
 
             If GameData_MoveTable_StartAddress < 1 Or GameData_TotalMoves < 1 Then
-                MessageBox.Show("Missing or unreadable data for MoveAddress or TotalMoves, cannot continue.", "VersionInfo Error")
+                MessageBox.Show("Missing or unreadable data for MoveAddress or TotalMoves, cannot continue.", "Presets Error")
                 Return
             End If
 
             If GameData_NameTable_StartAddress < 1 Or GameData_NameLength < 1 Then
-                MessageBox.Show("Missing or unreadable data for NameAddress or NameLength, cannot continue.", "VersionInfo Error")
+                MessageBox.Show("Missing or unreadable data for NameAddress or NameLength, cannot continue.", "Presets Error")
                 Return
             End If
 
             If GameData_DescTable_StartAddress < 1 Or GameData_DescLength < 1 Then
-                MessageBox.Show("Missing or unreadable data for DescAddress or DescLength, cannot continue.", "VersionInfo Error")
+                MessageBox.Show("Missing or unreadable data for DescAddress or DescLength, cannot continue.", "Presets Error")
                 Return
             End If
 
             If GameData_AnimTable_StartAddress < 1 Or GameData_AnimLength < 1 Then
-                MessageBox.Show("Missing or unreadable data for AnimAddress or AnimLength, cannot continue.", "VersionInfo Error")
+                MessageBox.Show("Missing or unreadable data for AnimAddress or AnimLength, cannot continue.", "Presets Error")
                 Return
             End If
 
@@ -280,7 +301,8 @@ Public Class Form1
                     MsgBox("Missing renaming file(s), cannot rename moves!")
                 End If
             End If
-            Dim UsedEffect_Pool(17, 255)
+
+            Dim UsedEffect_Pool(TypeIndex.MaxTypes + 1, 255)
             Dim Log_NaturePower As Boolean = GameData_NaturePower_Index(0) > 0
             Dim NaturePower_LogList(100) As String
 
@@ -315,6 +337,7 @@ Public Class Form1
                 End If
 
                 Dim LogScale = False
+                Dim MoveFlagString = ""
                 Dim Priority = 0
                 Dim UsePower = True
                 Dim UseAccuracy = True
@@ -334,6 +357,8 @@ Public Class Form1
                 Dim randomVal As Integer
                 Dim MaxPower As Integer = 51
                 Dim MaxAccuracy As Integer = 20
+                Dim ThisEffectFlags As Integer = 0
+                Dim ThisPowerTable = LookTable_Power
 
                 Dim movePoints As Integer = 0
                 Dim maxPoints As Integer = 0
@@ -361,22 +386,8 @@ Public Class Form1
                 'Roll an Effect Index or get the current one depending on settings.
                 address = SeekMoveData(index, MoveDataIndex.Effect)
                 If Check_RandomEffect Then
-                    Do Until DataIndex = 0
-                        Dim doExit = True
-                        DataIndex = RandomRange(1, GameData_Effects(0, 0))
-                        EffectIndex = GameData_Effects(DataIndex, EffectDataIndex.EffectIndex)
-                        If checkbox_limit_effects.Checked Then
-                            If GameData_Effects(DataIndex, EffectDataIndex.Limited) And UsedEffect_Pool(Typing, DataIndex) > 0 Then
-                                doExit = False
-                            End If
-                        End If
-                        If checkbox_tweak_semi.Checked And GameData_Effects(DataIndex, EffectDataIndex.SemiMove) Then
-                            doExit = False
-                        End If
-                        If doExit Then
-                            Exit Do
-                        End If
-                    Loop
+                    DataIndex = RollEffectData(Typing, UsedEffect_Pool)
+                    EffectIndex = GameData_Effects(DataIndex, EffectDataIndex.EffectIndex)
                     ChangeDesc(index, GameData_Effects_Strings(DataIndex, EffectDataIndex.EffectIndex))
                     br.BaseStream.Seek(address, SeekOrigin.Begin)
                     bw.Write(Convert.ToByte(EffectIndex))
@@ -413,7 +424,7 @@ Public Class Form1
                     IgnoreFlags = GameData_Effects(DataIndex, EffectDataIndex.IgnoreFlags)
                     If BaseFlags < 0 Then
                         BaseFlags = 0
-                        BaseFlags = TryAddMoveFlags(BaseFlags, MoveFlags.CanBlock, IgnoreFlags)
+                        BaseFlags = TryAddFlags(BaseFlags, MoveFlags.CanBlock, IgnoreFlags)
                     End If
                     ForcedTarget = GameData_Effects(DataIndex, EffectDataIndex.ForcedTarget)
                     If ShouldBypassAccuracy(ForcedTarget) Then
@@ -425,6 +436,10 @@ Public Class Form1
                         UseEffectChance = False
                     End If
                     movePoints = GameData_Effects(DataIndex, EffectDataIndex.BonusPoints)
+                    ThisEffectFlags = GameData_Effects(DataIndex, EffectDataIndex.EffectFlags)
+                    If ValueHasFlag(ThisEffectFlags, EffectFlags.MultiHit) Then
+                        ThisPowerTable = LookTable_Power_Multi
+                    End If
                 End If
 
                 'Setup targeting data
@@ -452,6 +467,7 @@ Public Class Form1
 
                 If Check_Balance Then
                     LogScale = True
+                    Dim divider = 1
                     Dim investPower = 1000
                     Dim investAccuracy = 1000
                     Dim investEffectChance = 500
@@ -469,7 +485,8 @@ Public Class Form1
                     If UsePower Then
                         Power = 2
                     Else
-                        movePoints -= 8
+                        'movePoints -= 8
+                        divider += 1
                         investPower = 0
                     End If
                     Accuracy = 0
@@ -479,7 +496,8 @@ Public Class Form1
                             Accuracy = MaxAccuracy
                         End If
                     Else
-                        movePoints -= 8
+                        'movePoints -= 8
+                        divider += 1
                         investAccuracy = 0
                     End If
                     PP = 1
@@ -490,15 +508,24 @@ Public Class Form1
                         investEffectChance = 0
                     End If
 
+                    movePoints = Math.Ceiling(movePoints / divider)
+
                     maxPoints = movePoints
                     If movePoints < 0 Then
                         movePoints = 0
                     End If
 
+                    If Priority = 0 And checkbox_mod_priority.Checked Then
+                        If movePoints >= 8 And rollPoints >= RandomRange(1, maxrollPoints * 32) Then
+                            movePoints -= 8
+                            Priority += 1
+                        End If
+                    End If
+
                     'Slightly weight the investment values based on the total movePoints
                     If Category < 2 Then
                         If checkbox_buff_normal.Checked And Typing = TypeIndex.Normal Then
-                            maxPoints += RandomRange(1, 2)
+                            maxPoints += RandomRange(0, 2)
                         End If
                         If UsePower And UseAccuracy Then
                             investMethod = RandomRange(0, 2)
@@ -570,7 +597,10 @@ Public Class Form1
                                 Case 0
                                     Power += 1
                                     movePoints -= 1
-                                    If Power >= 20 Then
+                                    If Power > ThisPowerTable.Length - 1 Then
+                                        investPower = 0
+                                        focusStat = -1
+                                    ElseIf Power >= 20 Then
                                         focusStat = -1
                                     End If
                                     investPower = InvestPoint_Tamper(investMethod, investPower)
@@ -580,6 +610,16 @@ Public Class Form1
                                     If Accuracy >= 20 Then
                                         focusStat = -1
                                     End If
+                                    If Accuracy = 20 Then
+                                        If checkbox_mod_accuracy.Checked Then
+                                            If movePoints >= 8 And rollPoints >= RandomRange(1, maxrollPoints * 28) Then
+                                                investAccuracy = 0
+                                                movePoints -= 8
+                                                Accuracy = 0
+                                                UseAccuracy = False
+                                            End If
+                                        End If
+                                    End If
                                     investAccuracy = InvestPoint_Tamper(investMethod, investAccuracy)
                                 Case 2
                                     If movePoints > 1 Then
@@ -588,18 +628,12 @@ Public Class Form1
                                     End If
                                     investPP = InvestPoint_Tamper(investMethod, investPP)
                                 Case 3
-                                    If EffectChance > 9 Then
-                                        'If we can go above 50% chance, instead try to max it out
-                                        If movePoints > 9 Then
-                                            EffectChance += 10
-                                            movePoints -= 10
-                                        End If
+                                    EffectChance += 1
+                                    movePoints -= 1
+                                    If EffectChance > LookTable_EffectChance.Length - 1 Then
                                         investEffectChance = 0
-                                    Else
-                                        EffectChance += 1
-                                        movePoints -= 1
-                                        investEffectChance = InvestPoint_Tamper(investMethod, investEffectChance)
                                     End If
+                                    investEffectChance = InvestPoint_Tamper(investMethod, investEffectChance)
                             End Select
                             If investMethod = 3 Then
                                 investMethod = 0
@@ -609,6 +643,22 @@ Public Class Form1
                             Exit Do
                         End If
                     Loop
+                Else
+                    If checkbox_rnd_effect.Checked Then
+                        If Priority = 0 And checkbox_mod_priority.Checked Then
+                            If RandomRange(1, 128) = 1 Then
+                                Priority += 1
+                            End If
+                        End If
+                    End If
+                    If checkbox_rnd_accuracy.Checked Then
+                        If UseAccuracy And checkbox_mod_accuracy.Checked Then
+                            If RandomRange(1, 96) = 1 Then
+                                Accuracy = 0
+                                UseAccuracy = False
+                            End If
+                        End If
+                    End If
                 End If
 
                 'Figure out the Category based on pre Gen 4 typings.
@@ -627,12 +677,17 @@ Public Class Form1
                 address = SeekMoveData(index, MoveDataIndex.Power)
                 If Check_RandomPower Then
                     If Check_Balance = False Then
-                        Power = RandomRange(1, 51)
+                        Power = RandomRange(1, ThisPowerTable.Length - 1)
                     End If
+
                     If FixedPower < 0 Then
-                        Power *= 5
                         If Power < 1 And Category < 2 Then
                             Power = 1
+                        Else
+                            If Power > ThisPowerTable.Length - 1 Then
+                                Power = ThisPowerTable.Length - 1
+                            End If
+                            Power = ThisPowerTable(Power)
                         End If
                     End If
                     br.BaseStream.Seek(address, SeekOrigin.Begin)
@@ -685,13 +740,13 @@ Public Class Form1
                 If Check_RandomEffect Then
                     If Check_Balance = False Then
                         If UseEffectChance Then
-                            EffectChance = RandomRange(1, 40)
+                            EffectChance = RandomRange(1, LookTable_EffectChance.Length - 1)
                         End If
                     End If
-                    EffectChance *= 5
-                    If EffectChance > 100 Then
-                        EffectChance = 100
+                    If EffectChance > LookTable_EffectChance.Length - 1 Then
+                        EffectChance = LookTable_EffectChance.Length - 1
                     End If
+                    EffectChance = LookTable_EffectChance(EffectChance)
                     br.BaseStream.Seek(address, SeekOrigin.Begin)
                     bw.Write(Convert.ToByte(EffectChance))
                 Else
@@ -732,14 +787,14 @@ Public Class Form1
                     'Also make every Physical and Special move trigger King's Rock.
                     If Category = 0 Then
                         If RandomRange(1, 8) < 8 Then
-                            BaseFlags = TryAddMoveFlags(BaseFlags, MoveFlags.MakeContact, IgnoreFlags)
+                            BaseFlags = TryAddFlags(BaseFlags, MoveFlags.MakeContact, IgnoreFlags)
                         End If
-                        BaseFlags = TryAddMoveFlags(BaseFlags, MoveFlags.AllowKingRock, IgnoreFlags)
+                        BaseFlags = TryAddFlags(BaseFlags, MoveFlags.AllowKingRock, IgnoreFlags)
                     ElseIf Category = 1 Then
-                        If RandomRange(1, 64) = 1 Then
-                            BaseFlags = TryAddMoveFlags(BaseFlags, MoveFlags.MakeContact, IgnoreFlags)
+                        If RandomRange(1, 128) = 1 Then
+                            BaseFlags = TryAddFlags(BaseFlags, MoveFlags.MakeContact, IgnoreFlags)
                         End If
-                        BaseFlags = TryAddMoveFlags(BaseFlags, MoveFlags.AllowKingRock, IgnoreFlags)
+                        BaseFlags = TryAddFlags(BaseFlags, MoveFlags.AllowKingRock, IgnoreFlags)
                     Else
                         If ForcedTarget And TargetFlags.User Then
                             'Ignore protect if we target ourself.
@@ -749,11 +804,11 @@ Public Class Form1
                         ElseIf ForcedTarget And TargetFlags.Contextual Then
                         Else
                             'Add Magic Coat if we don't target ourself.
-                            BaseFlags = TryAddMoveFlags(BaseFlags, MoveFlags.CanMagicCoat, IgnoreFlags)
+                            BaseFlags = TryAddFlags(BaseFlags, MoveFlags.CanMagicCoat, IgnoreFlags)
                         End If
                     End If
                     If ShouldMirrorMove(ForcedTarget) Then
-                        BaseFlags = TryAddMoveFlags(BaseFlags, MoveFlags.AllowMirrorMove, IgnoreFlags)
+                        BaseFlags = TryAddFlags(BaseFlags, MoveFlags.AllowMirrorMove, IgnoreFlags)
                     End If
 
                     'Snatch is handled per effect in the data table
@@ -761,14 +816,52 @@ Public Class Form1
                     bw.Write(Convert.ToByte(BaseFlags))
                 End If
 
+                If (BaseFlags And MoveFlags.MakeContact) = MoveFlags.MakeContact Then
+                    MoveFlagString += "Contact"
+                End If
+                If (BaseFlags And MoveFlags.CanBlock) = MoveFlags.CanBlock Then
+                    If MoveFlagString.Length > 0 Then
+                        MoveFlagString += "/"
+                    End If
+                    MoveFlagString += "Blockable"
+                End If
+                If (BaseFlags And MoveFlags.CanMagicCoat) = MoveFlags.CanMagicCoat Then
+                    If MoveFlagString.Length > 0 Then
+                        MoveFlagString += "/"
+                    End If
+                    MoveFlagString += "Magic Coat"
+                End If
+
+                If (BaseFlags And MoveFlags.CanSnatch) = MoveFlags.CanSnatch Then
+                    If MoveFlagString.Length > 0 Then
+                        MoveFlagString += "/"
+                    End If
+                    MoveFlagString += "Snatch"
+                End If
+
+                If (BaseFlags And MoveFlags.AllowMirrorMove) = MoveFlags.AllowMirrorMove Then
+                    If MoveFlagString.Length > 0 Then
+                        MoveFlagString += "/"
+                    End If
+                    MoveFlagString += "Mirror Move"
+                End If
+
+                If (BaseFlags And MoveFlags.AllowKingRock) = MoveFlags.AllowKingRock Then
+                    If MoveFlagString.Length > 0 Then
+                        MoveFlagString += "/"
+                    End If
+                    MoveFlagString += "King's Rock"
+                End If
+
                 'Remove from the Pool
                 UsedEffect_Pool(Typing, DataIndex) += 1
+                UsedEffect_Pool(TypeIndex.MaxTypes, DataIndex) += 1
 
                 '/////////////
                 '//ANIMATION//
                 '/////////////
                 If Check_RandomAnim Then
-                    AnimateMove(DataIndex, index, Power, Typing, Category, ForcedTarget)
+                    AnimateMove(DataIndex, index, Power, Typing, Category, ForcedTarget, ThisEffectFlags)
                 End If
 
                 '//////////
@@ -863,16 +956,26 @@ Public Class Form1
                     If EffectChance > 0 Then
                         sr.WriteLine("Effect Chance: " & EffectChance & "%")
                     End If
+                    If MoveFlagString.Length > 0 Then
+                        sr.WriteLine("Flags: " & MoveFlagString)
+                    Else
+                        sr.WriteLine("Flags: None")
+                    End If
+
                     If LogScale Then
-                        sr.WriteLine("Points RNG: " & rollPoints & " (" & minrollPoints & "-" & maxrollPoints & ")")
+                        If GameData_Effects(DataIndex, EffectDataIndex.BonusPoints) > -1 Then
+                            sr.WriteLine("Points Roll: " & rollPoints & "+" & GameData_Effects(DataIndex, EffectDataIndex.BonusPoints) & " (" & minrollPoints & "-" & maxrollPoints & ")")
+                        ElseIf GameData_Effects(DataIndex, EffectDataIndex.BonusPoints) < 0 Then
+                            sr.WriteLine("Points Roll: " & rollPoints & GameData_Effects(DataIndex, EffectDataIndex.BonusPoints) & " (" & minrollPoints & "-" & maxrollPoints & ")")
+                        End If
                         sr.WriteLine("Points Spent: " & maxPoints - movePoints & "/" & maxPoints)
                     End If
-                End If
 
-                If Log_NaturePower Then
-                    Dim natureIndex = GetNaturePower_ByMoveIndex(index)
-                    If natureIndex > 0 Then
-                        NaturePower_LogList(natureIndex) = GameData_NaturePower_Name(natureIndex) & " = " & index & "." & MoveName
+                    If Log_NaturePower Then
+                        Dim natureIndex = GetNaturePower_ByMoveIndex(index)
+                        If natureIndex > 0 Then
+                            NaturePower_LogList(natureIndex) = GameData_NaturePower_Name(natureIndex) & " = " & index & "." & MoveName
+                        End If
                     End If
                 End If
                 index += 1
@@ -934,15 +1037,9 @@ Public Class Form1
             GameData_DescLength = -1
             GameData_AnimLength = -1
             GameData_Effects(0, 0) = 0
+
+            GameData_AnimAddress(0, 0) = 0
             Dim ResetIndex = 0
-            Do While (ResetIndex < 17)
-                GameData_AnimAddress(ResetIndex, 0, 0) = 0
-                GameData_AnimAddress(ResetIndex, 1, 0) = 0
-                GameData_AnimAddress(ResetIndex, 2, 0) = 0
-                GameData_AnimAddress(ResetIndex, 3, 0) = 0
-                GameData_AnimAddress(ResetIndex, 4, 0) = 0
-                ResetIndex += 1
-            Loop
 
             ResetIndex = 0
             Do While (ResetIndex < MoveIndex_BlackList.Length)
@@ -1001,7 +1098,7 @@ Public Class Form1
             Loop
             srDataFile.Close()
         Else
-            MessageBox.Show("File " & DataFile & ".txt cannot be found.", "Missing VersionInfo File")
+            MessageBox.Show("File " & DataFile & ".txt cannot be found.", "Missing Presets File")
         End If
     End Sub
     Sub GameData_LineRead_MoveAddress(UnitData() As String)
@@ -1088,68 +1185,76 @@ Public Class Form1
         End If
     End Sub
     Sub GameData_LineRead_RegisterAnimData(UnitData() As String)
-        If UnitData.Length = 4 Then
+        If UnitData.Length > 3 Then
+
             Dim Typing = -1
             Dim Bracket = -1
             Dim Address = -1
+            Dim Flags = 0
 
-            Select Case UnitData(1)
-                Case "Normal"
-                    Typing = 0
-                Case "Fighting"
-                    Typing = 1
-                Case "Flying"
-                    Typing = 2
-                Case "Poison"
-                    Typing = 3
-                Case "Ground"
-                    Typing = 4
-                Case "Rock"
-                    Typing = 5
-                Case "Bug"
-                    Typing = 6
-                Case "Ghost"
-                    Typing = 7
-                Case "Steel"
-                    Typing = 8
-                Case "Fire"
-                    Typing = 10
-                Case "Water"
-                    Typing = 11
-                Case "Grass"
-                    Typing = 12
-                Case "Electric"
-                    Typing = 13
-                Case "Psychic"
-                    Typing = 14
-                Case "Ice"
-                    Typing = 15
-                Case "Dragon"
-                    Typing = 16
-                Case "Dark"
-                    Typing = 17
-            End Select
-
-            Select Case UnitData(2)
-                Case "Low"
-                    Bracket = 0
-                Case "Mid"
-                    Bracket = 1
-                Case "High"
-                    Bracket = 2
-                Case "Buff"
-                    Bracket = 3
-                Case "Debuff"
-                    Bracket = 4
-            End Select
-
-            Address = Convert.ToInt32(UnitData(3), 16)
+            Dim index = 1
+            Do Until index + 1 > UnitData.Length
+                Select Case UnitData(index)
+                    Case "Normal"
+                        Typing = 0
+                    Case "Fighting"
+                        Typing = 1
+                    Case "Flying"
+                        Typing = 2
+                    Case "Poison"
+                        Typing = 3
+                    Case "Ground"
+                        Typing = 4
+                    Case "Rock"
+                        Typing = 5
+                    Case "Bug"
+                        Typing = 6
+                    Case "Ghost"
+                        Typing = 7
+                    Case "Steel"
+                        Typing = 8
+                    Case "Fire"
+                        Typing = 10
+                    Case "Water"
+                        Typing = 11
+                    Case "Grass"
+                        Typing = 12
+                    Case "Electric"
+                        Typing = 13
+                    Case "Psychic"
+                        Typing = 14
+                    Case "Ice"
+                        Typing = 15
+                    Case "Dragon"
+                        Typing = 16
+                    Case "Dark"
+                        Typing = 17
+                    Case "Low"
+                        Bracket = 0
+                    Case "Mid"
+                        Bracket = 1
+                    Case "High"
+                        Bracket = 2
+                    Case "Buff"
+                        Bracket = 3
+                    Case "Debuff"
+                        Bracket = 4
+                    Case "Long"
+                        Flags = TryAddFlags(Flags, AnimFlags.IsLong)
+                    Case "AnimAdress"
+                        Address = Convert.ToInt32(UnitData(index + 1), 16)
+                        index += 1
+                End Select
+                index += 1
+            Loop
             If Typing > -1 And Bracket > -1 And Address > 0 Then
-                Dim index = GameData_AnimAddress(Typing, Bracket, 0) + 1
-                If index < 256 Then
-                    GameData_AnimAddress(Typing, Bracket, 0) = index
-                    GameData_AnimAddress(Typing, Bracket, index) = Address
-
+                index = GameData_AnimAddress(0, 0) + 1
+                If index < 1000 Then
+                    GameData_AnimAddress(0, 0) += 1
+                    GameData_AnimAddress(index, AnimationDataIndex.AnimAdress) = Address
+                    GameData_AnimAddress(index, AnimationDataIndex.Type) = Typing
+                    GameData_AnimAddress(index, AnimationDataIndex.Bracket) = Bracket
+                    GameData_AnimAddress(index, AnimationDataIndex.AnimFlags) = Flags
                     'MessageBox.Show("Animation #" & Address & " registered to Type " & Typing & " Bracket " & Bracket & " at Index " & index, "RegisterAnimData")
                 End If
             End If
@@ -1169,13 +1274,13 @@ Public Class Form1
             Dim UseEffectChance = False
             Dim MaxPower = 51
             Dim MaxAccuracy = 20
-            Dim Limited = False
+            Dim Limited = 0
             Dim FixedEffectChance = 0
             Dim BonusPoints = 0
             Dim DescAddress = -1
             Dim ForcedAnim = -1
             Dim DescLog = ""
-            Dim SemiMove = False
+            Dim EffectFlags = 0
 
             Dim index = 2
             Do Until index + 1 > UnitData.Length
@@ -1219,13 +1324,9 @@ Public Class Form1
                     Case "ForcedTarget"
                         ForcedTarget = Convert.ToInt32(UnitData(index + 1))
                     Case "Limited"
-                        If UnitData(index + 1) = "True" Then
-                            Limited = True
-                        End If
-                    Case "SemiMove"
-                        If UnitData(index + 1) = "True" Then
-                            SemiMove = True
-                        End If
+                        Limited = Convert.ToInt32(UnitData(index + 1))
+                    Case "EffectFlags"
+                        EffectFlags = Convert.ToInt32(UnitData(index + 1))
                     Case "FixedEffectChance"
                         FixedEffectChance = Convert.ToInt32(UnitData(index + 1))
                     Case "BonusPoints"
@@ -1259,7 +1360,7 @@ Public Class Form1
                     GameData_Effects(index, EffectDataIndex.Limited) = Limited
                     GameData_Effects(index, EffectDataIndex.FixedEffectChance) = FixedEffectChance
                     GameData_Effects(index, EffectDataIndex.BonusPoints) = BonusPoints
-                    GameData_Effects(index, EffectDataIndex.SemiMove) = SemiMove
+                    GameData_Effects(index, EffectDataIndex.EffectFlags) = EffectFlags
                     GameData_Effects_Strings(index, 0) = DescAddress
                     GameData_Effects_Strings(index, 1) = ForcedAnim
                     GameData_Effects_Strings(index, 2) = DescLog
@@ -1412,12 +1513,13 @@ Public Class Form1
         Loop
         streamReader.Close()
     End Sub
-    Sub AnimateMove(ByVal dataIndex As Integer, ByVal moveIndex As Integer, ByVal Power As Integer, ByVal Typing As Integer, ByVal Category As Integer, ByVal ForcedTarget As Integer)
+    Sub AnimateMove(ByVal dataIndex As Integer, ByVal moveIndex As Integer, ByVal Power As Integer, ByVal Typing As Integer, ByVal Category As Integer, ByVal ForcedTarget As Integer, ByVal ThisEffectFlags As Integer)
         If dataIndex > 0 Then
             Dim writeLocation = GameData_AnimTable_StartAddress + (GameData_AnimLength * moveIndex)
             Dim writeValue As Integer = GameData_Effects_Strings(dataIndex, 1)
             If writeValue < 0 Then
                 Dim Bracket = 0
+                Dim OnlyFlags = 0
                 If checkbox_rnd_anim_context.Checked Then
                     If Category > 1 Then
                         Bracket = 4
@@ -1427,7 +1529,7 @@ Public Class Form1
                     Else
                         If Power >= 100 Then
                             Bracket = 2
-                        ElseIf Power <= 1 Or Power >= 50 Then
+                        ElseIf Power <= 1 Or Power >= 60 Then
                             Bracket = 1
                         End If
                     End If
@@ -1435,10 +1537,14 @@ Public Class Form1
                     Bracket = RandomRange(0, 4)
                     Typing = RngTypeArray(RandomRange(0, RngTypeArray.Length))
                 End If
-
-                Dim maxRange = GameData_AnimAddress(Typing, Bracket, 0)
-                If maxRange > 0 Then
-                    writeValue = GameData_AnimAddress(Typing, Bracket, RandomRange(1, maxRange))
+                If ValueHasFlag(ThisEffectFlags, EffectFlags.MultiHit) Then
+                    OnlyFlags = TryAddFlags(OnlyFlags, AnimFlags.IsLong)
+                    Bracket = 0
+                    'MessageBox.Show("Has Multi: " & OnlyFlags)
+                End If
+                Dim animIndex = RollAnimation(Typing, Bracket, OnlyFlags)
+                If animIndex > 0 Then
+                    writeValue = GameData_AnimAddress(animIndex, AnimationDataIndex.AnimAdress)
                 End If
             End If
             If writeValue > 0 Then
@@ -1780,6 +1886,7 @@ Public Class Form1
     Private Sub rndaccurate_CheckedChanged_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles checkbox_rnd_accuracy.CheckedChanged
         If checkbox_rnd_accuracy.Checked = False Then
             checkbox_balance.Checked = False
+            checkbox_mod_accuracy.Checked = False
         End If
     End Sub
 
@@ -1792,6 +1899,7 @@ Public Class Form1
         If checkbox_rnd_effect.Checked = False Then
             checkbox_balance.Checked = False
             checkbox_limit_effects.Checked = False
+            checkbox_mod_priority.Checked = False
         End If
     End Sub
 
@@ -1804,22 +1912,34 @@ Public Class Form1
         End If
     End Sub
 
+    Private Sub checkbox_limitstatus_CheckedChanged(sender As Object, e As EventArgs) Handles checkbox_limit_effects.CheckedChanged
+        If checkbox_limit_effects.Checked Then
+            checkbox_rnd_effect.Checked = True
+        End If
+    End Sub
+    Private Sub checkbox_mod_priority_CheckedChanged(sender As Object, e As EventArgs) Handles checkbox_mod_priority.CheckedChanged
+        If checkbox_mod_priority.Checked Then
+            checkbox_rnd_effect.Checked = True
+        End If
+    End Sub
+
+    Private Sub checkbox_mod_accuracy_CheckedChanged(sender As Object, e As EventArgs) Handles checkbox_mod_accuracy.CheckedChanged
+        If checkbox_mod_accuracy.Checked Then
+            checkbox_rnd_accuracy.Checked = True
+        End If
+    End Sub
+
     Private Sub lstboxgame_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles lstboxgame.SelectedIndexChanged
         Select Case lstboxgame.Text
-            Case "Custom"
-                GameType = 0
+            Case "Unsupported"
+                GameType = -1
             Case "Fire Red USA 1.0"
                 GameType = 1
             Case "Emerald USA"
                 GameType = 2
             Case Else
-                GameType = -1
+                GameType = 0
         End Select
-    End Sub
-    Private Sub checkbox_limitstatus_CheckedChanged(sender As Object, e As EventArgs) Handles checkbox_limit_effects.CheckedChanged
-        If checkbox_limit_effects.Checked Then
-            checkbox_rnd_effect.Checked = True
-        End If
     End Sub
     Function SeekMoveData(moveIndex As Integer, dataIndex As MoveDataIndex)
         Return CInt(GameData_MoveTable_StartAddress + (12 * moveIndex) + dataIndex)
@@ -1827,13 +1947,15 @@ Public Class Form1
     Function RandomRange(minRange As Integer, maxRange As Integer)
         Return CInt(Math.Floor(((maxRange - minRange) + 1) * Rnd())) + minRange
     End Function
-    Function TryAddMoveFlags(currentFlags As Integer, addedFlag As Integer, ignoredFlags As Integer)
-        Dim ignoreThis = ((ignoredFlags And addedFlag) = addedFlag)
-        'MessageBox.Show("currentFlags = " & currentFlags & vbNewLine & "addedFlag = " & addedFlag & vbNewLine & "ignoredFlags = " & ignoredFlags & vbNewLine & "ignoreThis = " & ignoreThis)
-        If ignoreThis Then
+    Function TryAddFlags(currentFlags As Integer, addedFlag As Integer, Optional ignoredFlags As Integer = 0)
+        If ValueHasFlag(ignoredFlags, addedFlag) Then
             Return currentFlags
         End If
         Return currentFlags Or addedFlag
+    End Function
+
+    Function ValueHasFlag(currentFlags As Integer, theFlag As Integer)
+        Return (currentFlags And theFlag) = theFlag
     End Function
 
     Function CanModifyMove(moveIndex As Integer, effectIndex As Integer)
@@ -1939,6 +2061,64 @@ Public Class Form1
         Return weight
     End Function
 
+    Function RollEffectData(TypeFilter As Integer, UsedEffects As Object)
+        Dim returnIndex = 0
+        Dim ValidEffectList(300)
+        Dim iIndex = 1
+        Do Until iIndex > GameData_Effects(0, 0)
+            Dim isValid = True
+            If checkbox_limit_effects.Checked Then
+                Dim effectLimit = GameData_Effects(iIndex, EffectDataIndex.Limited)
+                If effectLimit > 0 Then
+                    If UsedEffects(TypeIndex.MaxTypes, iIndex) > 0 Or UsedEffects(TypeFilter, iIndex) > 0 Then
+                        isValid = False
+                    End If
+
+                End If
+            End If
+            If checkbox_tweak_semi.Checked And ValueHasFlag(GameData_Effects(iIndex, EffectDataIndex.EffectFlags), EffectFlags.SemiMove) Then
+                isValid = False
+            End If
+            If isValid Then
+                ValidEffectList(0) += 1
+                ValidEffectList(ValidEffectList(0)) = iIndex
+            End If
+            iIndex += 1
+        Loop
+        If ValidEffectList(0) > 0 Then
+            returnIndex = ValidEffectList(RandomRange(1, ValidEffectList(0)))
+        End If
+        Return returnIndex
+    End Function
+
+    Function RollAnimation(TypeFilter As Integer, Bracket As Integer, OnlyFlag As Integer)
+        Dim returnIndex = 0
+        Dim ValidAnimList(1000)
+        Dim iIndex = 1
+
+        Do Until iIndex > GameData_AnimAddress(0, 0)
+            Dim isValid = False
+            If GameData_AnimAddress(iIndex, AnimationDataIndex.Type) = TypeFilter Then
+                If GameData_AnimAddress(iIndex, AnimationDataIndex.Bracket) = Bracket Then
+                    If OnlyFlag > 0 Then
+                        isValid = ValueHasFlag(GameData_AnimAddress(iIndex, AnimationDataIndex.AnimFlags), OnlyFlag)
+                    Else
+                        isValid = True
+                    End If
+                End If
+            End If
+
+            If isValid Then
+                ValidAnimList(0) += 1
+                ValidAnimList(ValidAnimList(0)) = iIndex
+            End If
+            iIndex += 1
+        Loop
+        If ValidAnimList(0) > 0 Then
+            returnIndex = ValidAnimList(RandomRange(1, ValidAnimList(0)))
+        End If
+        Return returnIndex
+    End Function
     Private Sub checkbox_rnd_name_CheckedChanged(sender As Object, e As EventArgs) Handles checkbox_rnd_name.CheckedChanged
         If checkbox_rnd_name.Checked = False Then
             checkbox_rnd_name_context.Checked = False
@@ -1957,6 +2137,30 @@ Public Class Form1
     Private Sub checkbox_rnd_anim_context_CheckedChanged(sender As Object, e As EventArgs) Handles checkbox_rnd_anim_context.CheckedChanged
         If checkbox_rnd_anim_context.Checked Then
             checkbox_rnd_anim.Checked = True
+        End If
+    End Sub
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        SetupPresetList(PresetData_Path)
+        If lstboxgame.Items.Count < 2 Then
+            MessageBox.Show("Unable to find any Preset Files, make sure to have the Preset Folder along with the appropriate files.", "Preset Error")
+        End If
+    End Sub
+
+    Sub SetupPresetList(TargetFile)
+        If File.Exists(TargetFile) Then
+            lstboxgame.Items.Clear()
+            lstboxgame.Items.Add("Unsupported")
+            Dim LineData As String
+            Dim streamReader As StreamReader
+            streamReader = File.OpenText(TargetFile)
+            LineData = streamReader.ReadLine()
+            Do Until LineData Is Nothing
+                If LineData <> "Unsupported" And File.Exists(GameData_Path & LineData & ".txt") Then
+                    lstboxgame.Items.Add(LineData)
+                End If
+                LineData = streamReader.ReadLine()
+            Loop
+            streamReader.Close()
         End If
     End Sub
 End Class
