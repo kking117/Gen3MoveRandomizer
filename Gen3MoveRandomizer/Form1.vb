@@ -597,7 +597,7 @@ Public Class Form1
                                 Case 0
                                     Power += 1
                                     movePoints -= 1
-                                    If Power > ThisPowerTable.Length - 1 Then
+                                    If Power > ThisPowerTable.Length - 2 Then
                                         investPower = 0
                                         focusStat = -1
                                     ElseIf Power >= 20 Then
@@ -630,7 +630,7 @@ Public Class Form1
                                 Case 3
                                     EffectChance += 1
                                     movePoints -= 1
-                                    If EffectChance > LookTable_EffectChance.Length - 1 Then
+                                    If EffectChance > LookTable_EffectChance.Length - 2 Then
                                         investEffectChance = 0
                                     End If
                                     investEffectChance = InvestPoint_Tamper(investMethod, investEffectChance)
@@ -677,14 +677,14 @@ Public Class Form1
                 address = SeekMoveData(index, MoveDataIndex.Power)
                 If Check_RandomPower Then
                     If Check_Balance = False Then
-                        Power = RandomRange(1, ThisPowerTable.Length - 1)
+                        Power = RandomRange(1, ThisPowerTable.Length - 2)
                     End If
 
                     If FixedPower < 0 Then
                         If Power < 1 And Category < 2 Then
                             Power = 1
                         Else
-                            If Power > ThisPowerTable.Length - 1 Then
+                            If Power > ThisPowerTable.Length - 2 Then
                                 Power = ThisPowerTable.Length - 1
                             End If
                             Power = ThisPowerTable(Power)
@@ -743,7 +743,7 @@ Public Class Form1
                             EffectChance = RandomRange(1, LookTable_EffectChance.Length - 1)
                         End If
                     End If
-                    If EffectChance > LookTable_EffectChance.Length - 1 Then
+                    If EffectChance > LookTable_EffectChance.Length - 2 Then
                         EffectChance = LookTable_EffectChance.Length - 1
                     End If
                     EffectChance = LookTable_EffectChance(EffectChance)
