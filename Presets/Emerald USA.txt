@@ -1,0 +1,482 @@
+MoveAddress|31C898
+TotalMoves|354
+NameAddress|31977C
+NameLength|13
+DescAddress|61C520
+DescLength|4
+AnimAddress|2C8D6C
+AnimLength|4
+
+StruggleIndex|165
+
+SemiMoveIndex|155
+
+NaturePower|Other|129
+NaturePower|Sand|89
+NaturePower|Cave|247
+NaturePower|Rock|157
+NaturePower|Grass|78
+NaturePower|Long Grass|75
+NaturePower|Freshwater|61
+NaturePower|Sea|57
+NaturePower|Underwater|56
+
+AnimIndex|Normal|Low|AnimAdress|82C98F6//Tackle
+AnimIndex|Normal|Low|AnimAdress|82C9398//Pound
+AnimIndex|Normal|Low|AnimAdress|82CA78A//Cut
+AnimIndex|Normal|Low|AnimAdress|82CCE24//Quick Attack
+AnimIndex|Normal|Mid|AnimAdress|82C9934//Body Slam
+AnimIndex|Normal|Mid|AnimAdress|82CC6BD//Headbutt
+AnimIndex|Normal|Mid|AnimAdress|82CD3DB//Slash
+AnimIndex|Normal|Mid|AnimAdress|82CA14D//Mega Punch
+AnimIndex|Normal|Mid|AnimAdress|82CA7BC//Hidden Power
+AnimIndex|Normal|High|AnimAdress|82D4D70//Hyper Beam
+AnimIndex|Normal|High|AnimAdress|82D50D6//Hyper Voice
+AnimIndex|Normal|High|AnimAdress|82C9D7A//Double-Edge
+AnimIndex|Normal|High|AnimAdress|82CC981//Thrash
+AnimIndex|Normal|Buff|AnimAdress|82CB3B5//Protect
+AnimIndex|Normal|Buff|AnimAdress|82CB6F7//Safeguard
+AnimIndex|Normal|Buff|AnimAdress|82CAAA4//Swords Dance
+AnimIndex|Normal|Buff|AnimAdress|82D3A95//Recover
+AnimIndex|Normal|Debuff|AnimAdress|82CFF1C//Growl
+AnimIndex|Normal|Debuff|AnimAdress|82CEEF7//Tickle
+AnimIndex|Normal|Debuff|AnimAdress|82CD5ED//Foresight
+AnimIndex|Normal|Debuff|AnimAdress|82CEDBA//Odor Sleuth
+AnimIndex|Normal|Debuff|AnimAdress|82D2D90//Leer
+
+AnimIndex|Fire|Low|AnimAdress|82CAC96//Fire Spin
+AnimIndex|Fire|Low|AnimAdress|82CA0D9//Ember
+AnimIndex|Fire|Mid|AnimAdress|82D504E//Blaze Kick
+AnimIndex|Fire|Mid|AnimAdress|82C9A66//Flame Wheel
+AnimIndex|Fire|Mid|AnimAdress|82D1DDE//Flamethrower
+AnimIndex|Fire|Mid|AnimAdress|82D2C7D//Fire Punch
+AnimIndex|Fire|High|AnimAdress|82CFB58//Sacred Fire
+AnimIndex|Fire|High|AnimAdress|82D6694//Overheat
+AnimIndex|Fire|High|AnimAdress|82CDBC6//Heatwave
+AnimIndex|Fire|High|AnimAdress|82C9F55//Fire Blast
+AnimIndex|Fire|High|AnimAdress|82CE30B//Eruption
+AnimIndex|Fire|High|AnimAdress|82D5FE2//Blast Burn
+AnimIndex|Fire|Buff|AnimAdress|82D2707//Sunny Day
+AnimIndex|Fire|Buff|AnimAdress|82D4709//Will-O-Wisp
+AnimIndex|Fire|Buff|AnimAdress|82CAC96//Fire Spin
+AnimIndex|Fire|Debuff|AnimAdress|82D4709//Will-O-Wisp
+AnimIndex|Fire|Debuff|AnimAdress|82D2707//Sunny Day
+
+AnimIndex|Grass|Low|Long|AnimAdress|82D0F9A//Absorb
+AnimIndex|Grass|Low|AnimAdress|82D530E//Bullet Seed
+AnimIndex|Grass|Low|AnimAdress|82CAF91//Vine Whip
+AnimIndex|Grass|Mid|AnimAdress|82D10B2//Mega Drain
+AnimIndex|Grass|Mid|AnimAdress|82D7183//Magical Leaf
+AnimIndex|Grass|Mid|AnimAdress|82D2954//Razor Leaf
+AnimIndex|Grass|Mid|AnimAdress|82CE92F//Needle Arm
+AnimIndex|Grass|Mid|AnimAdress|82CF330//Leaf Blade
+AnimIndex|Grass|High|AnimAdress|82D1242//Giga Drain
+AnimIndex|Grass|High|AnimAdress|82D281C//Petal Dance
+AnimIndex|Grass|High|AnimAdress|82D5813//Frenzy Plant
+AnimIndex|Grass|Buff|AnimAdress|82CEB66//Aromatherapy
+AnimIndex|Grass|Buff|AnimAdress|82D14CC//Synthesis
+AnimIndex|Grass|Buff|AnimAdress|82D40E0//Ingrain
+AnimIndex|Grass|Buff|AnimAdress|82CBDB3//Growth
+AnimIndex|Grass|Buff|AnimAdress|82D08D8//Solar Beam
+AnimIndex|Grass|Debuff|AnimAdress|82C967B//Sleep Powder
+AnimIndex|Grass|Debuff|AnimAdress|82C954D//Stun Spore
+AnimIndex|Grass|Debuff|AnimAdress|82CEE04//GrassWhistle
+AnimIndex|Grass|Debuff|AnimAdress|82D27B7//Spore
+AnimIndex|Grass|Debuff|AnimAdress|82CA083//Leech Seed
+AnimIndex|Grass|Debuff|AnimAdress|82D275D//Cotton Spore
+AnimIndex|Grass|Debuff|AnimAdress|82D4C86//Sweet Scent
+
+AnimIndex|Water|Low|AnimAdress|82D1C43//Water Gun
+AnimIndex|Water|Low|Long|AnimAdress|82D010F//Bubble
+AnimIndex|Water|Low|AnimAdress|82D1F03//Whirlpool
+AnimIndex|Water|Mid|AnimAdress|82D1DCA//Surf
+AnimIndex|Water|Mid|AnimAdress|82D1CD0//Crabhammer
+AnimIndex|Water|Mid|AnimAdress|82D2B83//Octazooka
+AnimIndex|Water|Mid|AnimAdress|82CB021//Waterfall
+AnimIndex|Water|Mid|AnimAdress|82CC173//Bubblebeam
+AnimIndex|Water|Mid|AnimAdress|82D6C7A//Water Pulse
+AnimIndex|Water|Mid|AnimAdress|82D52FC//Muddy Water
+AnimIndex|Water|High|AnimAdress|82D6986//Hydro Cannon
+AnimIndex|Water|High|AnimAdress|82D0DB3//Hydro Pump
+AnimIndex|Water|High|AnimAdress|82CEF63//Water Spout
+AnimIndex|Water|Buff|AnimAdress|82D07F7//Withdraw
+AnimIndex|Water|Buff|AnimAdress|82D050A//Rain Dance
+AnimIndex|Water|Buff|AnimAdress|82D1F03//Whirlpool
+AnimIndex|Water|Debuff|AnimAdress|82CF28C//Water Sport
+
+AnimIndex|Electric|Low|AnimAdress|82CA39C//Thundershock
+AnimIndex|Electric|Mid|AnimAdress|82CFA8F//Thunderpunch
+AnimIndex|Electric|Mid|AnimAdress|82CA40A//Thunderbolt
+AnimIndex|Electric|Mid|AnimAdress|82CF422//Shock Wave
+AnimIndex|Electric|Mid|AnimAdress|82CBAA3//Spark
+AnimIndex|Electric|High|AnimAdress|82D3298//Zap Cannon
+AnimIndex|Electric|High|AnimAdress|82CF935//Thunder
+AnimIndex|Electric|High|AnimAdress|82CF194//Volt Tackle
+AnimIndex|Electric|Buff|AnimAdress|82CDDD0//Charge
+AnimIndex|Electric|Debuff|AnimAdress|82CA5C0//Thunder Wave
+
+AnimIndex|Ground|Low|AnimAdress|82D038F//Mud-Slap
+AnimIndex|Ground|Low|AnimAdress|82D516A//Sand Tomb
+AnimIndex|Ground|Low|AnimAdress|82D1882//Bone Rush
+AnimIndex|Ground|Mid|AnimAdress|82D1820//Bone Club
+AnimIndex|Ground|Mid|AnimAdress|82D17CC//Bonemerang
+AnimIndex|Ground|Mid|AnimAdress|82D560D//Mud Shot
+AnimIndex|Ground|Mid|AnimAdress|82CD8B0//Magnitude
+AnimIndex|Ground|High|AnimAdress|82CCB31//Earthquake
+AnimIndex|Ground|High|AnimAdress|82CCB7E//Fissure
+AnimIndex|Ground|Buff|AnimAdress|82CE7F8//Mud Sport
+AnimIndex|Ground|Buff|AnimAdress|82D516A//Sand Tomb
+AnimIndex|Ground|Debuff|AnimAdress|82D02E7//Sand-Attack
+AnimIndex|Ground|Debuff|AnimAdress|82D18CD//Spikes
+
+AnimIndex|Rock|Low|AnimAdress|82CBF5F//Rock Throw
+AnimIndex|Rock|Low|AnimAdress|82D65F7//Rock Blast
+AnimIndex|Rock|Low|AnimAdress|82CD75E//Rollout
+AnimIndex|Rock|Mid|AnimAdress|82D2A5B//AncientPower
+AnimIndex|Rock|Mid|AnimAdress|82CBFEB//Rock Slide
+AnimIndex|Rock|Mid|AnimAdress|82D6224//Rock Tomb
+AnimIndex|Rock|High|AnimAdress|82CDFA3//Superpower
+AnimIndex|Rock|High|AnimAdress|82CE30B//Eruption
+AnimIndex|Rock|Buff|AnimAdress|82CF4C4//Harden
+AnimIndex|Rock|Debuff|AnimAdress|82D1E7B//Sandstorm
+
+AnimIndex|Ice|Low|Long|AnimAdress|82D0CB9//Powder Snow
+AnimIndex|Ice|Low|AnimAdress|82C9C25//Icicle Spear
+AnimIndex|Ice|Low|AnimAdress|82D72A4//Ice Ball
+AnimIndex|Ice|Mid|AnimAdress|82CF6F9//Ice Punch
+AnimIndex|Ice|Mid|AnimAdress|82D0804//Aurora Beam
+AnimIndex|Ice|Mid|AnimAdress|82D06C0//Ice Beam
+AnimIndex|Ice|High|AnimAdress|82D0B2D//Blizzard
+AnimIndex|Ice|High|AnimAdress|82D5242//Sheer Cold
+AnimIndex|Ice|Buff|AnimAdress|82D2BE9//Mist
+AnimIndex|Ice|Buff|AnimAdress|82D2C4A//Haze
+AnimIndex|Ice|Debuff|AnimAdress|82CDC76//Hail
+AnimIndex|Ice|Debuff|AnimAdress|82CC250//Icy Wind
+
+AnimIndex|Poison|Low|AnimAdress|82C9E8D//Poison Sting
+AnimIndex|Poison|Low|Long|AnimAdress|82D01E5//Smog
+AnimIndex|Poison|Mid|AnimAdress|82D348A//Poison Tail
+AnimIndex|Poison|Mid|AnimAdress|82D57C8//Poison Fang
+AnimIndex|Poison|Mid|AnimAdress|82D16D2//Acid
+AnimIndex|Poison|Mid|AnimAdress|82D156A//Sludge
+AnimIndex|Poison|High|AnimAdress|82D15AC//Sludgebomb
+AnimIndex|Poison|Buff|AnimAdress|82CD335//Acid Armor
+AnimIndex|Poison|Debuff|AnimAdress|82D2FEA//Poison Gas
+AnimIndex|Poison|Debuff|AnimAdress|82C941C//Poisonpowder
+
+AnimIndex|Bug|Low|AnimAdress|82C9B60//Pin Missile
+AnimIndex|Bug|Low|AnimAdress|82CAD4A//Fury Cutter
+AnimIndex|Bug|Low|AnimAdress|82C9EE2//Twineedle
+AnimIndex|Bug|Mid|Long|AnimAdress|82D144A//Leech Life
+AnimIndex|Bug|Mid|AnimAdress|82D0EB2//Signal Beam
+AnimIndex|Bug|Mid|AnimAdress|82D630B//Silver Wind
+AnimIndex|Bug|High|AnimAdress|82D1924//Megahorn
+AnimIndex|Bug|High|AnimAdress|82CB829//Guillotine
+AnimIndex|Bug|Buff|AnimAdress|82CE4D4//Tail Glow
+AnimIndex|Bug|Debuff|AnimAdress|82D380E//String Shot
+AnimIndex|Bug|Debuff|AnimAdress|82D38E0//Spider Web
+
+AnimIndex|Flying|Low|AnimAdress|82D1A11//Gust
+AnimIndex|Flying|Low|AnimAdress|82D1AFF//Peck
+AnimIndex|Flying|Low|Long|AnimAdress|82D7024//Twister
+AnimIndex|Flying|Low|AnimAdress|82CA33B//Sonicboom
+AnimIndex|Flying|Mid|AnimAdress|82CAFC8//Drill Peck
+AnimIndex|Flying|Mid|AnimAdress|82CED58//Air Cutter
+AnimIndex|Flying|Mid|AnimAdress|82CF054//Aerial Ace
+AnimIndex|Flying|Mid|AnimAdress|82D1A62//Wing Attack
+AnimIndex|Flying|High|AnimAdress|82D1B26//Aeroblast
+AnimIndex|Flying|High|AnimAdress|82CD17B//Sky Attack
+AnimIndex|Flying|Buff|AnimAdress|82D3981//Razor Wind
+AnimIndex|Flying|Buff|AnimAdress|82D3981//Feather Dance
+AnimIndex|Flying|Buff|AnimAdress|82C9398//Mirror Move
+AnimIndex|Flying|Debuff|AnimAdress|82CE6BD//Feather Dance
+
+AnimIndex|Fighting|Low|AnimAdress|82D20B3//Karate Chop
+AnimIndex|Fighting|Low|AnimAdress|82CCAD4//Low Kick
+AnimIndex|Fighting|Low|AnimAdress|82D2261//Double Kick
+AnimIndex|Fighting|Low|AnimAdress|82D256C//Rock Smash
+AnimIndex|Fighting|Low|AnimAdress|82D5267//Arm Thrust
+AnimIndex|Fighting|Mid|AnimAdress|82D6B00//Seismic Toss
+AnimIndex|Fighting|Mid|AnimAdress|82CD565//Mach Punch
+AnimIndex|Fighting|Mid|AnimAdress|82D24F1//Vital Throw
+AnimIndex|Fighting|Mid|AnimAdress|82D216E//Jump Kick
+AnimIndex|Fighting|Mid|AnimAdress|82D6ED7//Sky Uppercut
+AnimIndex|Fighting|Mid|AnimAdress|82CE092//Brick Break
+AnimIndex|Fighting|High|AnimAdress|82D21CB//Hi Jump Kick
+AnimIndex|Fighting|High|AnimAdress|82D2105//Cross Chop
+AnimIndex|Fighting|High|AnimAdress|82CDFA3//Superpower
+AnimIndex|Fighting|High|AnimAdress|82D5A07//Focus Punch
+AnimIndex|Fighting|High|AnimAdress|82D235A//Dynamic Punch
+AnimIndex|Fighting|Buff|AnimAdress|82CF119//Bulk Up
+AnimIndex|Fighting|Buff|AnimAdress|82CB3D2//Detect
+AnimIndex|Fighting|Buff|AnimAdress|82D36CF//Focus Energy
+AnimIndex|Fighting|Debuff|AnimAdress|82CB3D2//Detect
+
+AnimIndex|Psychic|Low|AnimAdress|82CF824//Confusion
+AnimIndex|Psychic|Low|Long|AnimAdress|82D3212//Psywave
+AnimIndex|Psychic|Mid|AnimAdress|82D3118//Psybeam
+AnimIndex|Psychic|Mid|AnimAdress|82CF885//Psychic
+AnimIndex|Psychic|Mid|AnimAdress|82CF885//Dream Eater
+AnimIndex|Psychic|Mid|AnimAdress|82CEFEC//Extrasensory
+AnimIndex|Psychic|High|AnimAdress|82CE62E//Mist Ball
+AnimIndex|Psychic|High|AnimAdress|82CE517//Luster Purge
+AnimIndex|Psychic|High|AnimAdress|82D6D6F//Psycho Boost
+AnimIndex|Psychic|Buff|AnimAdress|82CF2B2//Calm Mind
+AnimIndex|Psychic|Buff|AnimAdress|82D009F//Reflect
+AnimIndex|Psychic|Buff|AnimAdress|82CFFED//Light Screen
+AnimIndex|Psychic|Buff|AnimAdress|82D00F2//Barrier
+AnimIndex|Psychic|Buff|AnimAdress|82D6C5D//Magic Coat
+AnimIndex|Psychic|Buff|AnimAdress|82D5F5D//Cosmic Power
+AnimIndex|Psychic|Debuff|AnimAdress|82CE3D8//Skill Swap
+AnimIndex|Psychic|Debuff|AnimAdress|82D4FAE//Role Play
+AnimIndex|Psychic|Debuff|AnimAdress|82CD079//Kinesis
+AnimIndex|Psychic|Debuff|AnimAdress|82D486E//Trick
+AnimIndex|Psychic|Debuff|AnimAdress|82D31B2//Hypnosis
+
+AnimIndex|Ghost|Low|AnimAdress|82D36A8//Lick
+AnimIndex|Ghost|Low|AnimAdress|82D6AB8//Astonish
+AnimIndex|Ghost|Low|Long|AnimAdress|82D3583//Nightshade
+AnimIndex|Ghost|Mid|AnimAdress|82CEF91//Shadow Punch
+AnimIndex|Ghost|High|AnimAdress|82CE466//Grudge
+AnimIndex|Ghost|High|AnimAdress|82D3665//Shadow Ball
+AnimIndex|Ghost|Buff|AnimAdress|82D3BF2//Curse
+AnimIndex|Ghost|Debuff|AnimAdress|82CD536//Spite
+AnimIndex|Ghost|Debuff|AnimAdress|82CBE91//Confuse Ray
+AnimIndex|Ghost|Debuff|AnimAdress|82CD62C//Destiny Bond
+AnimIndex|Ghost|Debuff|AnimAdress|82CD4A3//Nightmare
+AnimIndex|Ghost|Debuff|AnimAdress|82D3BF2//Curse
+
+AnimIndex|Dark|Low|AnimAdress|82CA980//Pursuit
+AnimIndex|Dark|Low|AnimAdress|82CA62F//Beat Up
+AnimIndex|Dark|Mid|AnimAdress|82D0555//Bite
+AnimIndex|Dark|Mid|AnimAdress|82CC12C//Thief
+AnimIndex|Dark|Mid|AnimAdress|82D0260//Faint Attack
+AnimIndex|Dark|Mid|AnimAdress|82D6DE3//Knock Off
+AnimIndex|Dark|High|AnimAdress|82D05B3//Crunch
+AnimIndex|Dark|Buff|AnimAdress|82D4EB2//Flatter
+AnimIndex|Dark|Buff|AnimAdress|82D6523//Snatch
+AnimIndex|Dark|Debuff|AnimAdress|82CDCF2//Memento
+AnimIndex|Dark|Debuff|AnimAdress|82CDE6B//Taunt
+AnimIndex|Dark|Debuff|AnimAdress|82D4EB2//Flatter
+AnimIndex|Dark|Debuff|AnimAdress|82CDCAE//Torment
+AnimIndex|Dark|Debuff|AnimAdress|82CECC8//Fake Tears
+
+AnimIndex|Dragon|Low|Long|AnimAdress|82D7024//Twister
+AnimIndex|Dragon|Low|AnimAdress|82CAC96//Fire Spin
+AnimIndex|Dragon|Low|AnimAdress|82D1F03//Whirlpool
+AnimIndex|Dragon|Mid|AnimAdress|82D53A4//Dragon Claw
+AnimIndex|Dragon|Mid|AnimAdress|82CFD71//Dragonbreath
+AnimIndex|Dragon|Mid|AnimAdress|82D042D//Dragon Rage
+AnimIndex|Dragon|High|AnimAdress|82CB908//Outrage
+AnimIndex|Dragon|Buff|AnimAdress|82CF3B3//Dragon Dance
+AnimIndex|Dragon|Debuff|AnimAdress|82CD0CA//Glare
+
+AnimIndex|Steel|Low|AnimAdress|82D342C//Iron Tail
+AnimIndex|Steel|Low|AnimAdress|82CD133//Barrage
+AnimIndex|Steel|Low|Long|AnimAdress|82CB8B5//Pay Day
+AnimIndex|Steel|Mid|AnimAdress|82D56AA//Meteor Mash
+AnimIndex|Steel|Mid|AnimAdress|82D34F0//Metal Claw
+AnimIndex|Steel|Mid|AnimAdress|82D337D//Steel Wing
+AnimIndex|Steel|High|AnimAdress|82CC804//Horn Drill
+AnimIndex|Steel|High|AnimAdress|82CB275//Explosion
+AnimIndex|Steel|Buff|AnimAdress|82CF0BE//Iron Defense
+AnimIndex|Steel|Debuff|AnimAdress|82D59B7//Metal Sound
+
+EffectIndex|0|DescAddress|8618786|DescLog|(Tackle)None
+EffectIndex|1|Limited|4|Category|Status|DescAddress|8618A0D|DescLog|(Sing)Puts target asleep.
+EffectIndex|2|UseEffectChance|True|DescAddress|86188D3|DescLog|(Poison Sting)Chance to poison target.
+EffectIndex|3|BonusPoints|-2|DescAddress|8618ECB|DescLog|(Giga Drain)1/2 life steal.
+EffectIndex|4|UseEffectChance|True|DescAddress|86182C9|DescLog|(Fire Punch)Chance to burn target.
+EffectIndex|5|UseEffectChance|True|DescAddress|86182EE|DescLog|(Ice Punch)Chance to freeze target.
+EffectIndex|6|UseEffectChance|True|DescAddress|8618314|DescLog|(Thunder Punch)Chance to paralyze target.
+EffectIndex|7|BonusPoints|4|DescAddress|86197F0|DescLog|(Selfdestruct)Faints the user, target defense is halved for damage calculation.
+EffectIndex|8|BonusPoints|4|DescAddress|8619B46|DescLog|(Dream Eater)Only works on sleeping targets, 1/2 life steal.
+EffectIndex|9|Limited|3|UseAccuracy|False|ForcedTarget|1|IgnoreFlags|6|Category|Status|DescAddress|86197C2|DescLog|(Mirror Move)Counters with the last move used against it.
+EffectIndex|10|Limited|4|ForcedTarget|16|BaseFlags|8|Category|Status|DescAddress|861C18D|DescLog|(Sharpen)Raises Attack by 1 stage.
+EffectIndex|11|Limited|4|ForcedTarget|16|BaseFlags|8|Category|Status|DescAddress|861953D|DescLog|(Harden)Raises Defense by 1 stage.
+EffectIndex|13|Limited|4|ForcedTarget|16|BaseFlags|8|Category|Status|DescAddress|8618F31|DescLog|(Growth)Raises Special Attack by 1 stage.
+EffectIndex|16|Limited|4|ForcedTarget|16|BaseFlags|8|Category|Status|DescAddress|86194E4|DescLog|(Double Team)Raises Evasion by 1 stage.
+EffectIndex|17|UseAccuracy|False|DescAddress|86199A1|DescLog|(Swift)Bypasses accuracy checks.
+EffectIndex|18|Limited|4|Category|Status|DescAddress|86189BD|DescLog|(Growl)Lowers Attack by 1 stage.
+EffectIndex|19|Limited|4|Category|Status|DescAddress|86188A9|DescLog|(Tail Whip)Lowers Defense by 1 stage.
+EffectIndex|20|Limited|4|Category|Status|DescAddress|861908B|DescLog|(String Shot)Lowers Speed by 1 stage.
+EffectIndex|23|Limited|4|Category|Status|DescAddress|8619D3F|DescLog|(Sand-Attack)Lowers Accuracy by 1 stage.
+EffectIndex|24|Limited|4|Category|Status|DescAddress|861AD42|DescLog|(Sweet Scent)Lowers Evasion by 1 stage.
+EffectIndex|25|Limited|3|ForcedTarget|16|Category|Status|DescAddress|86196C1|DescLog|(Haze)Resets all stat changes.
+EffectIndex|26|Limited|3|MaxAccuracy|40|FixedPower|1|ForcedTarget|16|DescAddress|861975E|DescLog|(Bide)Counters with twice the damage taken after two turns.
+EffectIndex|27|BonusPoints|2|FixedEffectChance|20|DescAddress|8618847|DescLog|(Thrash)Used for 2-3 turns then becomes confused.
+EffectIndex|28|Limited|3|MaxAccuracy|40|Priority|250|Category|Status|DescAddress|86189E7|DescLog|(Roar)Forces the target to switch out.
+EffectIndex|29|EffectFlags|2|BonusPoints|-13|DescAddress|8618219|DescLog|(Double Slap)Hits 2-5 times.
+EffectIndex|30|Limited|3|ForcedTarget|16|BaseFlags|8|Category|Status|DescAddress|8619F93|DescLog|(Conversion)
+EffectIndex|31|UseEffectChance|True|DescAddress|861898E|DescLog|(Bite)Chance to flinch target.
+EffectIndex|32|Limited|3|BonusPoints|-6|ForcedTarget|16|BaseFlags|8|Category|Status|DescAddress|8619512|DescLog|(Recover)Heals 1/2 of max health.
+EffectIndex|33|Limited|3|BonusPoints|-4|Category|Status|DescAddress|86192AD|DescLog|(Toxic)Badly Poisons the target.
+EffectIndex|34|FixedEffectChance|20|DescAddress|8618296|DescLog|(Pay Day)Increases prize money.
+EffectIndex|35|Limited|3|BonusPoints|-4|ForcedTarget|16|Category|Status|BaseFlags|8|DescAddress|861968D|DescLog|(Light Screen)
+EffectIndex|36|UseEffectChance|True|DescAddress|8619FC5|DescLog|(Tri Attack)Chance to burn, freeze or paralyze the target.
+EffectIndex|37|Limited|3|BonusPoints|-4|ForcedTarget|16|BaseFlags|8|Category|Status|DescAddress|8619ED1|DescLog|(Rest)
+EffectIndex|38|Limited|4|FixedPower|1|MaxAccuracy|6|BonusPoints|-8|DescAddress|8618753|DescLog|(Horn Drill)1-Hit KO
+EffectIndex|39|BonusPoints|7|DescAddress|86183C9|DescLog|(Razor Wind)Charges for 1 turn, attacks on the second.
+EffectIndex|40|Limited|5|FixedPower|1|DescAddress|8619FF2|DescLog|(Super Fang)Halves the target's current health.
+EffectIndex|41|Limited|3|FixedPower|1|DescAddress|86190BA|DescLog|(Dragon Rage)Deals 40 damage.
+EffectIndex|42|FixedEffectChance|20|DescAddress|8618522|DescLog|(Bind)Traps and deals damage over 2-5 turns.
+EffectIndex|43|BonusPoints|-1|DescAddress|861A027|DescLog|(Slash)High crit-ratio.
+EffectIndex|44|EffectFlags|2|BonusPoints|-8|DescAddress|86185DF|DescLog|(Double Kick)Hits 2 times.
+EffectIndex|45|MaxAccuracy|19|BonusPoints|5|DescAddress|8619ADF|DescLog|(Hi Jump Kick)Takes 1/2 recoil if it misses.
+EffectIndex|46|Limited|3|ForcedTarget|16|Category|Status|BaseFlags|8|DescAddress|8618B63|DescLog|(Mist)Protects the party against stat reductions.
+EffectIndex|47|ForcedTarget|16|Category|Status|BaseFlags|8|DescAddress|861972F|DescLog|(Focus Energy)Raises crit-ratio.
+EffectIndex|48|BonusPoints|2|DescAddress|8618814|DescLog|(Take Down)Takes 1/4 recoil.
+EffectIndex|49|Limited|4|Category|Status|DescAddress|8618A40|DescLog|(Supersonic)Causes confusion.
+EffectIndex|50|Limited|4|ForcedTarget|16|BonusPoints|-2|BaseFlags|8|Category|Status|DescAddress|86183FD|DescLog|(Swords Dance)Raises Attack by 2 stages.
+EffectIndex|51|Limited|4|ForcedTarget|16|BonusPoints|-2|BaseFlags|8|Category|Status|DescAddress|861C130|DescLog|(Iron Defense)Raises Defense by 2 stages.
+EffectIndex|52|Limited|4|ForcedTarget|16|BonusPoints|-2|BaseFlags|8|Category|Status|DescAddress|8619391|DescLog|(Agility)Raises Speed by 2 stages.
+EffectIndex|53|Limited|4|ForcedTarget|16|BonusPoints|-2|BaseFlags|8|Category|Status|DescAddress|861B96D|DescLog|(Tail Glow)Raises Special Attack by 2 stages.
+EffectIndex|54|Limited|4|ForcedTarget|16|BonusPoints|-2|BaseFlags|8|Category|Status|DescAddress|8619A59|DescLog|(Amnesia)Raises Special Defense by 2 stages.
+EffectIndex|57|Limited|3|BonusPoints|-2|UseAccuracy|False|IgnoreFlags|6|Category|Status|DescAddress|8619C76|DescLog|(Transform)Transforms into target.|ForcedAnim|82D4BDA
+EffectIndex|58|Limited|4|BonusPoints|-2|Category|Status|DescAddress|861B9FE|DescLog|(Feather Dance)Lowers Attack by 2 stages.
+EffectIndex|59|Limited|4|BonusPoints|-2|Category|Status|DescAddress|86194AF|DescLog|(Screech)Lowers Defense by 2 stages.
+EffectIndex|60|Limited|4|BonusPoints|-2|Category|Status|DescAddress|861A455|DescLog|(Scary Face)Lowers Speed by 2 stages.
+EffectIndex|62|Limited|4|BonusPoints|-2|Category|Status|DescAddress|861BE4D|DescLog|(Metal Sound)Lowers Special Defense by 2 stages.
+EffectIndex|65|Limited|3|ForcedTarget|16|Category|Status|BaseFlags|8|DescAddress|86196F8|DescLog|(Reflect)
+EffectIndex|66|Limited|4|Category|Status|DescAddress|8618FC8|DescLog|(Poison Powder)Poisons target.
+EffectIndex|67|Limited|4|BonusPoints|-4|Category|Status|DescAddress|8619189|DescLog|(Thunder Wave)Paralyzes target.
+EffectIndex|68|UseEffectChance|True|DescAddress|8618CE0|DescLog|(Aurora Beam)Chance to lower target's Attack by 1 stage.
+EffectIndex|69|UseEffectChance|True|DescAddress|861AD69|DescLog|(Iron Tail)Chance to lower target's Defense by 1 stage.
+EffectIndex|70|UseEffectChance|True|DescAddress|8619CAB|DescLog|(Bubble)Chance to lower target's Speed by 1 stage.
+EffectIndex|71|UseEffectChance|True|DescAddress|861B9CC|DescLog|(Mist Ball)Chance to lower target's Special Attack by 1 stage.
+EffectIndex|72|UseEffectChance|True|DescAddress|861B060|DescLog|(Shadow Ball)Chance to lower target's Special Defense by 1 stage.
+EffectIndex|73|UseEffectChance|True|DescAddress|861C073|DescLog|(Muddy Water)Chance to lower target's Accuracy by 1 stage.
+EffectIndex|75|BonusPoints|7|UseEffectChance|True|DescAddress|8619C41|DescLog|(Sky Attack)Charges for 1 turn, increased crit-ratio and chance to flinch.
+EffectIndex|76|UseEffectChance|True|DescAddress|8619CDF|DescLog|(Dizzy Punch)Chance to confuse target.
+EffectIndex|77|EffectFlags|2|BonusPoints|-8|UseEffectChance|True|DescAddress|8618905|DescLog|(Twineedle)Hits 2 times and chance to poison.
+EffectIndex|78|UseAccuracy|False|Priority|255|DescAddress|861ADCB|DescLog|(Vital Throw)Bypasses accuracy checks, reduced priority.
+EffectIndex|79|Limited|3|BonusPoints|-4|ForcedTarget|16|BaseFlags|8|Category|Status|DescAddress|861A05F|DescLog|(Substitute)|ForcedAnim|82D5807
+EffectIndex|80|BonusPoints|7|DescAddress|8618D14|DescLog|(Hyper Beam)User recharges next turn.
+EffectIndex|81|DescAddress|86193EE|DescLog|(Rage)Raises Attack by 1 stage if attacked while in use.
+EffectIndex|82|Limited|3|UseAccuracy|False|IgnoreFlags|6|Category|Status|DescAddress|861947E|DescLog|(Mimic)
+EffectIndex|83|Limited|3|UseAccuracy|False|ForcedTarget|1|Category|Status|DescAddress|861978E|DescLog|(Metronome)
+EffectIndex|84|Limited|3|Category|Status|DescAddress|8618EFD|DescLog|(Leech Seed)Steals 1/8 HP each turn, cannot hit Grass-Types.
+EffectIndex|85|Limited|3|ForcedTarget|16|Category|Status|DescAddress|8619DA6|DescLog|(Splash) Does nothing.
+EffectIndex|86|Limited|3|BonusPoints|-4|Category|Status|DescAddress|8618AAB|DescLog|(Disable)
+EffectIndex|87|Limited|4|FixedPower|1|DescAddress|8618E3F|DescLog|(Seismic Toss)Deals damage equal to level.
+EffectIndex|88|Limited|3|FixedPower|1|DescAddress|8619D74|DescLog|(Psywave)Deals damage roughly equal to level.
+EffectIndex|89|Limited|3|MaxAccuracy|40|FixedPower|1|Category|Physical|ForcedTarget|1|Priority|251|DescAddress|8618E0C|DescLog|(Counter)Deals twice the physical damage taken.
+EffectIndex|90|Limited|3|BonusPoints|-4|Category|Status|DescAddress|861ACA8|DescLog|(Encore)
+EffectIndex|91|Limited|3|UseAccuracy|False|BonusPoints|-4|Category|Status|DescAddress|861AB46|DescLog|(Pain Split)
+EffectIndex|92|UseEffectChance|True|BonusPoints|4|DescAddress|861A22F|DescLog|(Snore)Works only while asleep, chance to flinch target.
+EffectIndex|93|Limited|3|BonusPoints|-4|ForcedTarget|16|Category|Status|DescAddress|861A2C0|DescLog|(Conversion 2)
+EffectIndex|94|Limited|4|BaseFlags|8|MaxAccuracy|40|Category|Status|DescAddress|861A73C|DescLog|(Lock-On)
+EffectIndex|95|Limited|3|UseAccuracy|False|IgnoreFlags|22|Category|Status|DescAddress|861A0CF|DescLog|(Sketch)
+EffectIndex|97|Limited|3|UseAccuracy|False|ForcedTarget|1|Category|Status|DescAddress|861AA1D|DescLog|(Sleep Talk)Uses a random known move while asleep.
+EffectIndex|98|Limited|3|BonusPoints|-6|ForcedTarget|16|Category|Status|DescAddress|861A644|DescLog|(Destiny Bond)
+EffectIndex|99|Limited|6|FixedPower|1|DescAddress|861A359|DescLog|(Reversal)
+EffectIndex|100|Limited|3|Category|Status|DescAddress|861A38A|DescLog|(Spite)
+EffectIndex|101|DescAddress|861A897|DescLog|(False Swipe)
+EffectIndex|102|Limited|4|BonusPoints|-6|ForcedTarget|16|BaseFlags|8|Category|Status|DescAddress|861BCEB|DescLog|(Aromatherapy)Heals party status problems.
+EffectIndex|103|BonusPoints|-8|Priority|1|DescAddress|86193BA|DescLog|(Quick Attack)Increased priority.
+EffectIndex|104|EffectFlags|2|Limited|5|FixedPower|10|DescAddress|861A0F7|DescLog|(Triple Kick)Hits 3 times, rolling accuracy and gaining 10 power each time.
+EffectIndex|105|FixedEffectChance|20|DescAddress|861A12D|DescLog|(Thief)
+EffectIndex|106|Limited|4|UseAccuracy|False|BonusPoints|-6|Category|Status|DescAddress|861A9B7|DescLog|(Mean Look)Traps target.
+EffectIndex|107|Limited|3|UseAccuracy|False|Category|Status|DescAddress|861A1CE|DescLog|(Nightmare)
+EffectIndex|108|Limited|3|ForcedTarget|16|BaseFlags|8|Category|Status|DescAddress|861956C|DescLog|(Minimize)
+EffectIndex|109|Limited|3|UseAccuracy|False|IgnoreFlags|6|BonusPoints|-4|Category|Status|DescAddress|861A261|DescLog|(Curse)
+EffectIndex|111|Limited|4|BonusPoints|-4|ForcedTarget|16|Priority|3|Category|Status|DescAddress|861A3EF|DescLog|(Protect)
+EffectIndex|112|Limited|3|BonusPoints|-4|ForcedTarget|64|Category|Status|DescAddress|861A5B0|DescLog|(Spikes)
+EffectIndex|113|Limited|4|MaxAccuracy|40|Category|Status|DescAddress|861A611|DescLog|(Foresight)
+EffectIndex|114|Limited|3|BonusPoints|-4|ForcedTarget|16|Category|Status|DescAddress|861A677|DescLog|(Perish Song)
+EffectIndex|115|Limited|3|BonusPoints|-6|ForcedTarget|16|Category|Status|DescAddress|861A7A0|DescLog|(Sandstorm)
+EffectIndex|116|Limited|3|BonusPoints|-4|Priority|3|ForcedTarget|16|Category|Status|DescAddress|861A802|DescLog|(Endure)
+EffectIndex|117|BonusPoints|-10|DescAddress|861A866|DescLog|(Rollout)
+EffectIndex|118|Limited|3|BonusPoints|-4|Category|Status|DescAddress|861A8C9|DescLog|(Swagger)
+EffectIndex|119|BonusPoints|-8|DescAddress|861A957|DescLog|(Fury Cutter)Power increases with consecutive hits.
+EffectIndex|120|Category|Status|DescAddress|861A9EC|DescLog|(Attract)
+EffectIndex|121|Limited|3|FixedPower|1|DescAddress|861AA7F|DescLog|(Return)Power grows with higher Friendship.
+EffectIndex|122|Limited|5|FixedPower|1|DescAddress|861AAB2|DescLog|(Present)
+EffectIndex|123|Limited|3|FixedPower|1|DescAddress|861AAE0|DescLog|(Frustration)Power grows with lower Friendship.
+EffectIndex|124|Limited|3|ForcedTarget|16|BaseFlags|8|Category|Status|DescAddress|861AB17|DescLog|(Safeguard)Protects the party against status effects.
+EffectIndex|125|UseEffectChance|True|DescAddress|861A200|DescLog|(Flame Wheel)Thaws user and chance to burn target.
+EffectIndex|126|Limited|5|FixedPower|1|DescAddress|861ABAC|DescLog|(Magnitude)Power has varying magnitude.
+EffectIndex|127|Limited|3|ForcedTarget|16|Category|Status|DescAddress|861AC73|DescLog|Baton Pass
+EffectIndex|128|DescAddress|861ACDE|DescLog|(Pursuit)Power is doubled against switching/fleeing targets.
+EffectIndex|129|DescAddress|861AD12|DescLog|(Rapid Spin)Clears Spikes, frees the user from Leech Seed and binding.
+EffectIndex|130|Limited|3|FixedPower|1|DescAddress|8618A74|DescLog|(Sonicboom)Deals 20 damage.
+EffectIndex|132|Limited|1|BonusPoints|-6|ForcedTarget|16|BaseFlags|8|Category|Status|DescAddress|861ADFC|DescLog|(Morning Sun)
+EffectIndex|133|Limited|1|BonusPoints|-6|ForcedTarget|16|BaseFlags|8|Category|Status|DescAddress|861AE2D|DescLog|(Synthesis)
+EffectIndex|134|Limited|1|BonusPoints|-6|ForcedTarget|16|BaseFlags|8|Category|Status|DescAddress|861AE5E|DescLog|(Moonlight)
+EffectIndex|135|Limited|5|FixedPower|1|DescAddress|861AE8F|DescLog|(Hidden Power)Power and Type vary with the user's IVs.
+EffectIndex|136|Limited|3|BonusPoints|-6|ForcedTarget|16|Category|Status|DescAddress|861AF19|DescLog|(Rain Dance)
+EffectIndex|137|Limited|3|BonusPoints|-6|ForcedTarget|16|Category|Status|DescAddress|861AF4C|DescLog|(Sunny Day)
+EffectIndex|138|UseEffectChance|True|DescAddress|861A98A|DescLog|(Steel Wing)Chance to raise Defense by 1 stage.
+EffectIndex|139|UseEffectChance|True|DescAddress|861AD9B|DescLog|(Metal Claw)Chance to raise Attack by 1 stage.
+EffectIndex|140|BonusPoints|-2|UseEffectChance|True|DescAddress|861B03C|DescLog|(Ancient Power)Chance to Omniboost by 1 stage.
+EffectIndex|142|Limited|3|BonusPoints|-6|ForcedTarget|16|BaseFlags|8|Category|Status|DescAddress|861A4F0|DescLog|(Belly Drum)
+EffectIndex|143|Limited|3|UseAccuracy|False|BonusPoints|-6|BaseFlags|8|IgnoreFlags|4|Category|Status|DescAddress|861AFE3|DescLog|(Psych Up)
+EffectIndex|144|Limited|3|MaxAccuracy|40|FixedPower|1|ForcedTarget|1|Priority|251|Category|Special|DescAddress|861AFAC|DescLog|(Mirror Coat)Deals twice the Special damage taken.
+EffectIndex|145|BonusPoints|6|DescAddress|86199CA|DescLog|(Skull Bash) Raises Defense by 1 stage, attacks on the second turn.
+EffectIndex|146|UseEffectChance|True|DescAddress|861AEEA|DescLog|(Twister)Chance to flinch, deals x2 damage to flying targets.
+EffectIndex|147|DescAddress|861920F|DescLog|(Earthquake)Deals x2 damage to digging targets.
+EffectIndex|148|MaxAccuracy|40|BonusPoints|7|BaseFlags|0|Category|Special|DescAddress|861B095|DescLog|(Future Sight)Deals Typeless damage two turns later.
+EffectIndex|149|DescAddress|8618457|DescLog|(Gust)Deals x2 damage to flying targets.
+EffectIndex|150|UseEffectChance|True|DescAddress|86185A8|DescLog|(Stomp)Chance to flinch, deals x2 damage to minimized targets.
+EffectIndex|151|BonusPoints|7|DescAddress|8618F95|DescLog|(Solar Beam)Charges on turn 1, unless there's Sunlight.
+EffectIndex|152|UseEffectChance|True|DescAddress|86191BC|DescLog|(Thunder)Can hit flying targets, bypasses accuracy checks in Rain, 50% accuracy in Sunlight, chance to paralyze.
+EffectIndex|153|Limited|3|BonusPoints|-6|ForcedTarget|16|Category|Status|DescAddress|861941D|DescLog|(Teleport)Runs from battle.
+EffectIndex|154|EffectFlags|2|BonusPoints|-13|DescAddress|861B12C|DescLog|(Beat Up)Deals Typeless damage for each party member.
+EffectIndex|155|EffectFlags|1|BonusPoints|6|DescAddress|8619276|DescLog|Dig/Fly/Dive/Bounce|ForcedAnim|82CCCA1
+EffectIndex|156|Limited|3|ForcedTarget|16|BaseFlags|8|Category|Status|DescAddress|861962C|DescLog|(Defense Curl)
+EffectIndex|157|Limited|3|BonusPoints|-6|ForcedTarget|16|BaseFlags|8|Category|Status|DescAddress|8619AB4|DescLog|(Soft Boiled)
+EffectIndex|158|FixedEffectChance|20|Priority|1|BonusPoints|-8|DescAddress|861B159|DescLog|(Fake Out)
+EffectIndex|159|FixedEffectChance|20|DescAddress|861B18C|DescLog|(Uproar)
+EffectIndex|160|Limited|3|ForcedTarget|16|BaseFlags|8|Category|Status|DescAddress|861B1C2|DescLog|(Stockpile)
+EffectIndex|161|Limited|3|BonusPoints|1|DescAddress|861B1E6|DescLog|(Spit Up)
+EffectIndex|162|Limited|3|ForcedTarget|16|BaseFlags|8|Category|Status|DescAddress|861B217|DescLog|(Swallow)
+EffectIndex|164|Limited|3|BonusPoints|-6|ForcedTarget|16|Category|Status|DescAddress|861B276|DescLog|(Hail)
+EffectIndex|165|Limited|3|BonusPoints|-4|Category|Status|DescAddress|861B2A3|DescLog|(Torment)
+EffectIndex|166|Limited|3|BonusPoints|-4|Category|Status|DescAddress|861B2D8|DescLog|(Flatter)
+EffectIndex|167|Limited|3|BonusPoints|-4|Category|Status|DescAddress|861B302|DescLog|(Will-O-Wisp)Burns target.
+EffectIndex|168|Limited|3|UseAccuracy|False|BonusPoints|-6|IgnoreFlags|4|Category|Status|DescAddress|861B330|DescLog|(Memento)
+EffectIndex|169|BonusPoints|-2|DescAddress|861B360|DescLog|(Facade)
+EffectIndex|170|BonusPoints|15|Priority|253|DescAddress|861B393|DescLog|(Focus Punch)
+EffectIndex|171|DescAddress|861B3C8|DescLog|(Smelling Salts)
+EffectIndex|172|Limited|3|BonusPoints|-6|ForcedTarget|16|Priority|3|Category|Status|DescAddress|861B3FE|DescLog|(Follow Me)
+EffectIndex|173|Limited|3|BonusPoints|-2|UseAccuracy|False|ForcedTarget|1|Category|Status|DescAddress|861B431|DescLog|(Nature Power)
+EffectIndex|174|Limited|3|ForcedTarget|16|BaseFlags|8|Category|Status|DescAddress|861B466|DescLog|(Charge)Doubles Move Power next turn if it's Electric-Type.
+EffectIndex|175|Limited|3|BonusPoints|-4|Category|Status|DescAddress|861B49A|DescLog|(Taunt)
+EffectIndex|176|Limited|3|BonusPoints|-4|ForcedTarget|16|Priority|5|BaseFlags|0|Category|Status|DescAddress|861B4C7|DescLog|(Helping Hand)
+EffectIndex|177|Limited|3|BonusPoints|-4|IgnoreFlags|4|Category|Status|DescAddress|861B4F2|DescLog|(Trick)
+EffectIndex|178|Limited|3|UseAccuracy|False|BonusPoints|-4|IgnoreFlags|4|Category|Status|DescAddress|861B51A|DescLog|(Role Play)
+EffectIndex|179|Limited|3|BonusPoints|-6|ForcedTarget|16|BaseFlags|8|Category|Status|DescAddress|861B54C|DescLog|(Wish)
+EffectIndex|180|Limited|3|IgnoreFlags|2|UseAccuracy|False|ForcedTarget|1|Category|Status|DescAddress|861B57C|DescLog|(Assist)
+EffectIndex|181|Limited|3|BonusPoints|-6|ForcedTarget|16|BaseFlags|8|Category|Status|DescAddress|861B5AE|DescLog|(Ingrain)
+EffectIndex|182|BonusPoints|3|DescAddress|861C212|DescLog|(Superpower)Lowers the user's Attack and Defense by 1 stage.
+EffectIndex|183|Limited|3|BonusPoints|-4|UseAccuracy|False|ForcedTarget|1|Priority|4|Category|Status|DescAddress|861B614|DescLog|(Magic Coat)Bounces back Status moves.
+EffectIndex|184|Limited|3|BonusPoints|-4|ForcedTarget|16|BaseFlags|8|Category|Status|DescAddress|861B643|DescLog|(Recycle)
+EffectIndex|185|Priority|252|DescAddress|861B66A|DescLog|(Revenge)
+EffectIndex|186|DescAddress|861B69C|DescLog|(Brick Break)
+EffectIndex|187|Limited|3|UseAccuracy|False|BonusPoints|-4|Category|Status|DescAddress|861B6D1|DescLog|(Yawn)
+EffectIndex|188|FixedEffectChance|20|DescAddress|861B706|DescLog|(Knock Off)
+EffectIndex|189|Limited|3|FixedPower|1|BonusPoints|-4|DescAddress|861B73A|DescLog|(Endeavour)
+EffectIndex|190|BonusPoints|7|DescAddress|861B773|DescLog|(Eruption)
+EffectIndex|191|Limited|3|UseAccuracy|False|BonusPoints|-6|IgnoreFlags|4|Category|Status|DescAddress|861B7A5|DescLog|(Skill Swap)
+EffectIndex|192|Limited|3|BonusPoints|-4|ForcedTarget|16|BaseFlags|8|Category|Status|DescAddress|861B7D7|DescLog|(Imprison)
+EffectIndex|193|Limited|3|BonusPoints|-2|ForcedTarget|16|BaseFlags|8|Category|Status|DescAddress|861B809|DescLog|(Refresh)
+EffectIndex|194|Limited|3|BonusPoints|-4|ForcedTarget|16|Category|Status|DescAddress|861B830|DescLog|(Grudge)
+EffectIndex|195|Limited|3|BonusPoints|-4|UseAccuracy|False|ForcedTarget|1|Priority|4|BaseFlags|0|Category|Status|DescAddress|861B867|DescLog|(Snatch)
+EffectIndex|196|Limited|5|FixedPower|1|DescAddress|8618DDA|DescLog|(Low Kick)
+EffectIndex|197|UseEffectChance|True|DescAddress|861B89C|DescLog|(Secret Power)Effect is based on the environment.
+EffectIndex|198|BonusPoints|5|DescAddress|8618879|DescLog|(Double-Edge)1/3 Recoil
+EffectIndex|198|BonusPoints|5|UseEffectChance|True|DescAddress|861C300|DescLog|(Volt Tackle)1/3 Recoil, chance to paralyze target.
+EffectIndex|200|BonusPoints|-2|UseEffectChance|True|DescAddress|861BA56|DescLog|(Blaze Kick)Chance to burn target, high crit-ratio.
+EffectIndex|201|Limited|3|BonusPoints|-4|ForcedTarget|16|BaseFlags|8|Category|Status|DescAddress|861BA90|DescLog|(Mud Sport)
+EffectIndex|202|UseEffectChance|True|DescAddress|861BB87|DescLog|(Poison Fang)Chance to Badly Poison target.
+EffectIndex|203|DescAddress|861BCB8|DescLog|(Weather Ball)Type matches the weather, Power is doubled during weather. Deals Normal-Type damage otherwise.
+EffectIndex|204|BonusPoints|3|DescAddress|861BD82|DescLog|(Overheat)Lowers the user's Special Attack by 2 stages.
+EffectIndex|205|Limited|3|BonusPoints|-2|Category|Status|DescAddress|861B5E5|DescLog|(Tickle)Lowers the target's Attack and Defense by 1 stage.
+EffectIndex|206|Limited|3|BonusPoints|-2|ForcedTarget|16|BaseFlags|8|Category|Status|DescAddress|861BEE5|DescLog|(Cosmic Power)Raises the user's Defense and Special Defense by 1 stage.
+EffectIndex|207|DescAddress|861BFDA|DescLog|(Sky Uppercut)Can hit flying targets.
+EffectIndex|208|Limited|3|BonusPoints|-2|ForcedTarget|16|BaseFlags|8|Category|Status|DescAddress|861C212|DescLog|(Bulk Up)Raises the user's Attack and Defense by 1 stage.
+EffectIndex|209|BonusPoints|-2|UseEffectChance|True|DescAddress|861C2A1|DescLog|(Poison Tail)Chance to Poison target, high crit-ratio.
+EffectIndex|210|Limited|3|ForcedTarget|16|BaseFlags|8|Category|Status|DescAddress|861C367|DescLog|(Water Sport)
+EffectIndex|211|Limited|3|BonusPoints|-2|ForcedTarget|16|BaseFlags|8|Category|Status|DescAddress|861C39C|DescLog|(Calm Mind)Raises the user's Special Attack and Special Defense by 1 stage.
+EffectIndex|212|Limited|3|BonusPoints|-2|ForcedTarget|16|BaseFlags|8|Category|Status|DescAddress|861C401|DescLog|(Dragon Dance)Raises the user's Attack and Speed by 1 stage.
+EffectIndex|213|Limited|3|ForcedTarget|16|BaseFlags|8|Category|Status|DescAddress|861B938|DescLog|(Camouflage)

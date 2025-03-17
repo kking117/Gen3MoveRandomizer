@@ -2,6 +2,7 @@ Doom
 Dark
 Night
 Brutal
+Brute
 Foul
 Nasty
 Sinister
@@ -19,3 +20,5 @@ Omen
 Ebony
 Mal
 Shady
+Void
+Dusk

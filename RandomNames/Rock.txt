@@ -21,3 +21,6 @@ Zircon
 Quartz
 Amber
 Salt
+Gem
+Carbon
+Ore

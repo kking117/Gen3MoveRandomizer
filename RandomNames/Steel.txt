@@ -20,5 +20,7 @@ Gigaton
 Slag
 Cobalt
 Gold
+Golden
 Alloy
 Tin
+Anchor

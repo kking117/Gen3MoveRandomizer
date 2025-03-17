@@ -19,3 +19,6 @@ Azure
 Shoal
 Brine
 Vapor
+Flood
+Pearl
+Marine

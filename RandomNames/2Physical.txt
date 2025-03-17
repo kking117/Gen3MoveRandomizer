@@ -102,3 +102,6 @@ Riposte
 Cleave
 Punt
 Indent
+Graze
+Drift
+Axel

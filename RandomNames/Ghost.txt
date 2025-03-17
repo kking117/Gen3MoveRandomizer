@@ -11,6 +11,7 @@ Spectre
 Gloom
 Ethereal
 Soul
+Ghoul
 Wraith
 Banshee
 Hex
@@ -18,3 +19,12 @@ Carrion
 Eidolon
 Ghostly
 Reaper
+Tomb
+Grave
+Dusk
+Dreary
+Dismal
+Ghast
+Ghastly
+Creepy
+Terror

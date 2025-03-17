@@ -6,6 +6,7 @@ Fury
 Barrage
 Double
 Triple
+Quad
 Mega
 Super
 Quick
@@ -29,7 +30,6 @@ Signal
 Cosmic
 First
 Final
-Sucker
 Doom
 Ancient
 Skull
@@ -59,3 +59,5 @@ Multi-
 Normal
 Neutral
 Pure
+Omni
+Zenith

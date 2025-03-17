@@ -42,3 +42,4 @@ Panic
 Shatter
 Stare
 Blight
+Wail

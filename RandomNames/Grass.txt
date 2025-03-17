@@ -7,7 +7,7 @@ Leaf
 Grass
 Vine
 Root
-Leech
+Fungal
 Cotton
 Bloom
 Flower
@@ -26,3 +26,8 @@ Spore
 Timber
 Cactus
 Rosy
+Orchid
+Grove
+Fruity
+Berry
+Tropic
