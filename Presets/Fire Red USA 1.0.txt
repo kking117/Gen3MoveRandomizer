@@ -62,7 +62,7 @@ AnimIndex|Fire|Buff|AnimAdress|81C8836//Fire Spin
 AnimIndex|Fire|Debuff|AnimAdress|81D2340//Will-O-Wisp
 AnimIndex|Fire|Debuff|AnimAdress|81D033F//Sunny Day
 
-AnimIndex|Grass|Low|AnimAdress|81CEBD5//Absorb
+AnimIndex|Grass|Low|Long|AnimAdress|81CEBD5//Absorb
 AnimIndex|Grass|Low|AnimAdress|81D2F3A//Bullet Seed
 AnimIndex|Grass|Low|AnimAdress|81C8B31//Vine Whip
 AnimIndex|Grass|Mid|AnimAdress|81CECED//Mega Drain
@@ -87,7 +87,7 @@ AnimIndex|Grass|Debuff|AnimAdress|81D0395//Cotton Spore
 AnimIndex|Grass|Debuff|AnimAdress|81D28BD//Sweet Scent
 
 AnimIndex|Water|Low|AnimAdress|81CF87A//Water Gun
-AnimIndex|Water|Low|AnimAdress|81CDD4A//Bubble
+AnimIndex|Water|Low|Long|AnimAdress|81CDD4A//Bubble
 AnimIndex|Water|Low|AnimAdress|81CFB3A//Whirlpool
 AnimIndex|Water|Mid|AnimAdress|81CFA01//Surf
 AnimIndex|Water|Mid|AnimAdress|81CF907//Crabhammer
@@ -140,7 +140,7 @@ AnimIndex|Rock|High|AnimAdress|81CBEEF//Eruption
 AnimIndex|Rock|Buff|AnimAdress|81CD0AB//Harden
 AnimIndex|Rock|Debuff|AnimAdress|81CFAB2//Sandstorm
 
-AnimIndex|Ice|Low|AnimAdress|81CE8F4//Powder Snow
+AnimIndex|Ice|Low|Long|AnimAdress|81CE8F4//Powder Snow
 AnimIndex|Ice|Low|AnimAdress|81C77C1//Icicle Spear
 AnimIndex|Ice|Low|AnimAdress|81D4F8E//Ice Ball
 AnimIndex|Ice|Mid|AnimAdress|81CD2E0//Ice Punch
@@ -154,7 +154,7 @@ AnimIndex|Ice|Debuff|AnimAdress|81CB816//Hail
 AnimIndex|Ice|Debuff|AnimAdress|81C9DF0//Icy Wind
 
 AnimIndex|Poison|Low|AnimAdress|81C7A2D//Poison Sting
-AnimIndex|Poison|Low|AnimAdress|81CDE20//Smog
+AnimIndex|Poison|Low|Long|AnimAdress|81CDE20//Smog
 AnimIndex|Poison|Mid|AnimAdress|81D10C2//Poison Tail
 AnimIndex|Poison|Mid|AnimAdress|81D33F4//Poison Fang
 AnimIndex|Poison|Mid|AnimAdress|81CF308//Acid
@@ -167,7 +167,7 @@ AnimIndex|Poison|Debuff|AnimAdress|81C6FB8//Poisonpowder
 AnimIndex|Bug|Low|AnimAdress|81C76FC//Pin Missile
 AnimIndex|Bug|Low|AnimAdress|81C88EA//Fury Cutter
 AnimIndex|Bug|Low|AnimAdress|81C7A82//Twineedle
-AnimIndex|Bug|Mid|AnimAdress|81CF085//Leech Life
+AnimIndex|Bug|Mid|Long|AnimAdress|81CF085//Leech Life
 AnimIndex|Bug|Mid|AnimAdress|81CEAED//Signal Beam
 AnimIndex|Bug|Mid|AnimAdress|81D3F37//Silver Wind
 AnimIndex|Bug|High|AnimAdress|81CF55A//Megahorn
@@ -178,7 +178,7 @@ AnimIndex|Bug|Debuff|AnimAdress|81D1518//Spider Web
 
 AnimIndex|Flying|Low|AnimAdress|81CF648//Gust
 AnimIndex|Flying|Low|AnimAdress|81CF736//Peck
-AnimIndex|Flying|Low|AnimAdress|81D4D0E//Twister
+AnimIndex|Flying|Low|Long|AnimAdress|81D4D0E//Twister
 AnimIndex|Flying|Low|AnimAdress|81C7EDB//Sonicboom
 AnimIndex|Flying|Mid|AnimAdress|81C8B68//Drill Peck
 AnimIndex|Flying|Mid|AnimAdress|81CC93D//Air Cutter
@@ -213,7 +213,7 @@ AnimIndex|Fighting|Buff|AnimAdress|81D1307//Focus Energy
 AnimIndex|Fighting|Debuff|AnimAdress|81C8F72//Detect
 
 AnimIndex|Psychic|Low|AnimAdress|81CD40B//Confusion
-AnimIndex|Psychic|Low|AnimAdress|81D0E4A//Psywave
+AnimIndex|Psychic|Low|Long|AnimAdress|81D0E4A//Psywave
 AnimIndex|Psychic|Mid|AnimAdress|81D0D50//Psybeam
 AnimIndex|Psychic|Mid|AnimAdress|81CD46C//Psychic
 AnimIndex|Psychic|Mid|AnimAdress|81D0A1F//Dream Eater
@@ -235,7 +235,7 @@ AnimIndex|Psychic|Debuff|AnimAdress|81D0DEA//Hypnosis
 
 AnimIndex|Ghost|Low|AnimAdress|81D12E0//Lick
 AnimIndex|Ghost|Low|AnimAdress|81D46E4//Astonish
-AnimIndex|Ghost|Low|AnimAdress|81D11BB//Nightshade
+AnimIndex|Ghost|Low|Long|AnimAdress|81D11BB//Nightshade
 AnimIndex|Ghost|Mid|AnimAdress|81CCB76//Shadow Punch
 AnimIndex|Ghost|High|AnimAdress|81CC04A//Grudge
 AnimIndex|Ghost|High|AnimAdress|81D129D//Shadow Ball
@@ -261,7 +261,7 @@ AnimIndex|Dark|Debuff|AnimAdress|81D2AE9//Flatter
 AnimIndex|Dark|Debuff|AnimAdress|81CB84E//Torment
 AnimIndex|Dark|Debuff|AnimAdress|81CC8AD//Fake Tears
 
-AnimIndex|Dragon|Low|AnimAdress|81D4D0E//Twister
+AnimIndex|Dragon|Low|Long|AnimAdress|81D4D0E//Twister
 AnimIndex|Dragon|Low|AnimAdress|81C8836//Fire Spin
 AnimIndex|Dragon|Low|AnimAdress|81CFB3A//Whirlpool
 AnimIndex|Dragon|Mid|AnimAdress|81D2FD0//Dragon Claw
@@ -273,7 +273,7 @@ AnimIndex|Dragon|Debuff|AnimAdress|81CAC6A//Glare
 
 AnimIndex|Steel|Low|AnimAdress|81D1064//Iron Tail
 AnimIndex|Steel|Low|AnimAdress|81CACD3//Barrage
-AnimIndex|Steel|Low|AnimAdress|81C9455//Pay Day
+AnimIndex|Steel|Low|Long|AnimAdress|81C9455//Pay Day
 AnimIndex|Steel|Mid|AnimAdress|81D32D6//Meteor Mash
 AnimIndex|Steel|Mid|AnimAdress|81D1128//Metal Claw
 AnimIndex|Steel|Mid|AnimAdress|81D0FB5//Steel Wing
