@@ -470,7 +470,7 @@ Public Class Form1
                     Dim divider = 1
                     Dim investPower = 1000
                     Dim investAccuracy = 1000
-                    Dim investEffectChance = 500
+                    Dim investEffectChance = 300
                     Dim investPP = 1000
                     rollPoints = RandomRange(minrollPoints, maxrollPoints)
                     maxPoints += rollPoints
@@ -2101,7 +2101,9 @@ Public Class Form1
             If GameData_AnimAddress(iIndex, AnimationDataIndex.Type) = TypeFilter Then
                 If GameData_AnimAddress(iIndex, AnimationDataIndex.Bracket) = Bracket Then
                     If OnlyFlag > 0 Then
-                        isValid = ValueHasFlag(GameData_AnimAddress(iIndex, AnimationDataIndex.AnimFlags), OnlyFlag)
+                        If ValueHasFlag(GameData_AnimAddress(iIndex, AnimationDataIndex.AnimFlags), OnlyFlag) = False Then
+                            isValid = True
+                        End If
                     Else
                         isValid = True
                     End If
